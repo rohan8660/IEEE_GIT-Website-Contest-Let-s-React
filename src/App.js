@@ -10,7 +10,7 @@ import Contacts from "./Components/Contacts/Contacts";
 function App() {
   return (
       <Fragment>
-        <Router basename="/IEEE_GIT/">
+        <Router>
           <Header/>
           <Route path='/' exact component={Home}/>
           <Route path='/Timeline' component={TimeLine}/>
