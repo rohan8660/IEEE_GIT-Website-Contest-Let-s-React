@@ -47,7 +47,7 @@ function TabTimeLine(props) {
   const styles = useStyle();
   return (
     <Container fixed>
-      <Typography variant="h2" className={styles.headLine}>
+      <Typography variant="h3" className={styles.headLine}>
         Timeline
       </Typography>
       <Timeline align="alternate">
@@ -73,7 +73,7 @@ function TabTimeLine(props) {
                       title={title}
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
+                      <Typography gutterBottom variant="h6" component="h2">
                         {title}
                       </Typography>
                       <Typography variant="body2" component="p">

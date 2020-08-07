@@ -24,18 +24,18 @@ const useStyles = makeStyles((theme) => ({
 function CardCarousel({ imgStyle }) {
   const styles = useStyles();
   return (
-    <Carousel itemsToShow={3} pagination={false}>
+    <Carousel itemsToShow={imgStyle} pagination={false}>
       {techCards.map(({title,description,image,id})=>(<Typography component="div" key={id} className={styles.containerStyle}>
         <Card className={styles.root}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
+              height="150"
               image={require(`../../Assets/${image}.jpg`)}
               title={title}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography gutterBottom variant="h6" component="h2">
                 {title}
               </Typography>
               <Typography variant="body2" component="p">

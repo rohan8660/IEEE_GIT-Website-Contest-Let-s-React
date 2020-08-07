@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-function CarouselHome({imgStyle}) {
+function CarouselHome({imgStyle,imgDivStyle}) {
   return (
     <Carousel
       autoPlay={true}
@@ -12,21 +12,21 @@ function CarouselHome({imgStyle}) {
       showArrows={false}
       showIndicators={false}
     >
-      <div>
+      <div className={imgDivStyle}>
         <img
         alt="pic1"
           src={require(`../../Assets/Home1.jpg`)}
           className={imgStyle}
         />
       </div>
-      <div>
+      <div className={imgDivStyle}>
         <img
         alt="pic2"
           src={require(`../../Assets/Home2.jpg`)}
           className={imgStyle}
         />
       </div>
-      <div>
+      <div className={imgDivStyle}>
         <img
         alt="pic3"
           src={require(`../../Assets/Home3.jpg`)}

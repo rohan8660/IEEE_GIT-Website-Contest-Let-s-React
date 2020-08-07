@@ -132,12 +132,12 @@ function TabFooter(props) {
               Contacts
             </Link>
             <Link
-              href="/StudentCouncil"
+              href="/Events"
               underline="none"
               color="secondary"
               className={styles.linkButton}
             >
-              Student Council
+              Events
             </Link>
           </Typography>
         </Typography>

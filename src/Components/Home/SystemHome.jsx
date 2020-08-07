@@ -8,9 +8,13 @@ import animationData from "../../Assets/Lottie/28705-student-university-characte
 import animationData1 from "../../Assets/Lottie/20135-profesor.json";
 
 const useStyles = makeStyles((theme) => ({
-  imageProp: {
+  imgDiv: {
     width: "100%",
     height: 600,
+  },
+  imageProp: {
+    width: "100%",
+    height: "100%",
     backgroundRepeat: "no-repeat",
     opacity: "0.6",
   },
@@ -71,15 +75,15 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
     padding: 20,
   },
-  joinButtonContainer:{
-    width:"100%",
-    display:"flex",
-    justifyContent:"space-around",
-    padding:10
+  joinButtonContainer: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-around",
+    padding: 10,
   },
-  joinButton:{
-    backgroundColor:"coral"
-  }
+  joinButton: {
+    backgroundColor: "coral",
+  },
 }));
 
 function SystemHome(props) {
@@ -102,7 +106,7 @@ function SystemHome(props) {
   const styles = useStyles();
   return (
     <Fragment>
-      <CarouselHome imgStyle={styles.imageProp} />
+      <CarouselHome imgStyle={styles.imageProp} imgDivStyle={styles.imgDiv} />
       <Grid container className={styles.gridRoot}>
         <Paper elevation={3} className={styles.paperRoot}>
           <Typography variant="h4" className={styles.typo1}>
@@ -141,20 +145,18 @@ function SystemHome(props) {
         </Paper>
       </Grid>
       <Grid>
-        <Typography component="div" style={{ height: 200 }} />
+        <Typography component="div" style={{ height: 175 }} />
       </Grid>
       <Grid container className={styles.gridRoot2}>
-        <Typography variant="h2" style={{ padding: 20 }}>
-          We offer wonferful technolgy to our students and faculty!!
+        <Typography variant="h3" style={{ padding: 20 }}>
+          We offer wonferful technolgy to our students and profesionals!!
         </Typography>
-        <Paper variant="outlined">
-          <Typography component="div">
-            <CardCarousel />
-          </Typography>
-        </Paper>
+        <Typography component="div">
+          <CardCarousel imgStyle={3}/>
+        </Typography>
       </Grid>
       <Grid container className={styles.gridRoot2}>
-        <Typography variant="h2" style={{ padding: 20 }}>
+        <Typography variant="h3" style={{ padding: 20 }}>
           You can continuously learn, interact, collaborate and innovate.
         </Typography>
         <Paper variant="elevation" elevation={3} className={styles.joinPaper}>

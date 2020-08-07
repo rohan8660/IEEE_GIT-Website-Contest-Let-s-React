@@ -1,5 +1,12 @@
 import React from "react";
-import { Grid, Typography, makeStyles, Link, Divider } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  makeStyles,
+  Link,
+  Divider,
+  Tooltip,
+} from "@material-ui/core";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -71,11 +78,21 @@ function SystemFooter(props) {
             Visit
           </Typography>
           <Typography component="div" className={styles.socialIconContainer}>
-            <FacebookIcon color="secondary" className={styles.socialIcon} />
-            <InstagramIcon color="secondary" className={styles.socialIcon} />
-            <TwitterIcon color="secondary" className={styles.socialIcon} />
-            <LinkedInIcon color="secondary" className={styles.socialIcon} />
-            <YouTubeIcon color="secondary" className={styles.socialIcon} />
+            <Tooltip title="Facebook">
+              <FacebookIcon color="secondary" className={styles.socialIcon} />
+            </Tooltip>
+            <Tooltip title="Instagram">
+              <InstagramIcon color="secondary" className={styles.socialIcon} />
+            </Tooltip>
+            <Tooltip title="Twitter">
+              <TwitterIcon color="secondary" className={styles.socialIcon} />
+            </Tooltip>
+            <Tooltip title="LinkedIn">
+              <LinkedInIcon color="secondary" className={styles.socialIcon} />
+            </Tooltip>
+            <Tooltip title="YouTube">
+              <YouTubeIcon color="secondary" className={styles.socialIcon} />
+            </Tooltip>
           </Typography>
           <Typography component="div" className={styles.linkContainer}>
             <Link
@@ -130,12 +147,12 @@ function SystemFooter(props) {
               Contacts
             </Link>
             <Link
-              href="/StudentCouncil"
+              href="/Events"
               underline="none"
               color="secondary"
               className={styles.linkButton}
             >
-              Student Council
+              Events
             </Link>
           </Typography>
         </Typography>

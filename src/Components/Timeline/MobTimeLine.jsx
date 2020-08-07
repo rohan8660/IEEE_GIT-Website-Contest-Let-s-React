@@ -29,7 +29,7 @@ const useStyle = makeStyles((theme) => ({
   root: {
     maxWidth: "100%",
     height: 200,
-    width: 250,
+    width: 200,
   },
   eachTimeItem: {
     width: 0,
@@ -63,7 +63,7 @@ function MobTimeLine(props) {
               </TimelineDot>
               <TimelineConnector className={styles.dotTime} />
             </TimelineSeparator>
-            <TimelineContent>
+            <TimelineContent style={{height:300}}>
               <Paper elevation={3}>
                 <Card className={styles.root}>
                   <CardActionArea>
