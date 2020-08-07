@@ -92,7 +92,7 @@ function SystemEvents(props) {
   }
   for (let j = 0; j < Event.length; j += 3) {
     myArray2.push(
-        <Grid component="div" className={styles.mainContainer} lg spacing={4} key={Math.random()}>
+        <Grid component="div" className={styles.mainContainer} key={Math.random()}>
          {myArray1[j]}
          {myArray1[j+1]}
          {myArray1[j+2]}
@@ -102,7 +102,7 @@ function SystemEvents(props) {
   return (
     <Fragment>
       <Grid container className={styles.root}>
-        <Typography variant="h4" className={styles.headings} lg>
+        <Typography variant="h4" className={styles.headings}>
           Our Upcoming Events
         </Typography>
         <Typography paragraph style={{ textAlign: "center" }}>

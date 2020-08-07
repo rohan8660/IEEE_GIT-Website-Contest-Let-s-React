@@ -82,7 +82,7 @@ function SystemTimeLine(props) {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    <Button size="small" color={red[500]}>
+                    <Button size="small">
                       Learn More
                     </Button>
                   </CardActions>

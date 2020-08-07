@@ -94,7 +94,7 @@ function MobEvents(props) {
   return (
     <Fragment>
       <Grid container className={styles.root}>
-        <Typography variant="h4" className={styles.headings} lg>
+        <Typography variant="h4" className={styles.headings} >
           Our Upcoming Events
         </Typography>
         <Typography paragraph style={{padding:5 }}>

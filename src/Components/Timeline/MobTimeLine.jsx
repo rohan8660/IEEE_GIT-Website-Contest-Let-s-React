@@ -84,7 +84,7 @@ function MobTimeLine(props) {
                     </CardContent>
                   </CardActionArea>
                   <CardActions style={{padding:0,margin:0}}>
-                    <Button size="small" color={red[500]}>
+                    <Button size="small" >
                       Learn More
                     </Button>
                   </CardActions>
