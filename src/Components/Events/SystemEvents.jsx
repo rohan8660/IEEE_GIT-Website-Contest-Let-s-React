@@ -8,6 +8,7 @@ import {
   Button,
 } from "@material-ui/core";
 import Event from "./Event";
+import { useEffect } from "react";
 
 const useStyles = makeStyles((theme) => ({
   headings: {
@@ -23,8 +24,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     backgroundSize: "cover",
-    borderRadius:10
-
+    borderRadius: 10,
   },
   paperContainer: {
     width: 400,
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
       background: theme.palette.secondary.light,
     },
     margin: 20,
-    borderRadius:10
+    borderRadius: 10,
   },
   subHeading: {
     padding: 5,
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   mainContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent:"center"
+    justifyContent: "center",
   },
   buttonStyle: {
     borderRadius: 15,
@@ -57,10 +57,16 @@ function SystemEvents(props) {
   const styles = useStyles();
   var myArray1 = [];
   var myArray2 = [];
+  useEffect(() => {
+    
   for (let i = 0; i < Event.length; i++) {
     myArray1.push(
-        <Grid item key={Event[i].id}>
-        <Paper variant="elevation" elevation={3} className={styles.paperContainer}>
+      <Grid item key={Event[i].id}>
+        <Paper
+          variant="elevation"
+          elevation={3}
+          className={styles.paperContainer}
+        >
           <Typography component="div" className={styles.imageContainer}>
             <Typography
               component="img"
@@ -92,13 +98,20 @@ function SystemEvents(props) {
   }
   for (let j = 0; j < Event.length; j += 3) {
     myArray2.push(
-        <Grid component="div" className={styles.mainContainer} key={Math.random()}>
-         {myArray1[j]}
-         {myArray1[j+1]}
-         {myArray1[j+2]}
-        </Grid>
+      <Grid
+        component="div"
+        className={styles.mainContainer}
+        key={Math.random()}
+      >
+        {myArray1[j]}
+        {myArray1[j + 1]}
+        {myArray1[j + 2]}
+      </Grid>
     );
   }
+    
+  });
+  
   return (
     <Fragment>
       <Grid container className={styles.root}>
