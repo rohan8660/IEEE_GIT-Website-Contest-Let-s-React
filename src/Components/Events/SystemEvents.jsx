@@ -112,7 +112,7 @@ class SystemEvents extends Component {
         </Grid>
       );
     }
-this.setState({finalArray:myArray1});
+this.setState({finalArray:myArray2});
   };
 
   render() {
