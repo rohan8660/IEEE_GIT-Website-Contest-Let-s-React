@@ -54,9 +54,9 @@ const useStyles = (theme) => ({
 });
 
 class SystemEvents extends Component {
-  state={
-    finalArray:[]
-  }
+  state = {
+    finalArray: [],
+  };
   componentDidMount = () => {
     const { classes } = this.props;
     var myArray1 = [];
@@ -101,18 +101,14 @@ class SystemEvents extends Component {
     }
     for (let j = 0; j < Event.length; j += 3) {
       myArray2.push(
-        <Grid
-          component="div"
-          className={classes.mainContainer}
-          key={j}
-        >
+        <Grid component="div" className={classes.mainContainer} key={j}>
           {myArray1[j]}
           {myArray1[j + 1]}
           {myArray1[j + 2]}
         </Grid>
       );
     }
-this.setState({finalArray:myArray2});
+    this.setState({ finalArray: myArray2 });
   };
 
   render() {
