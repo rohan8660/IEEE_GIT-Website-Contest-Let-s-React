@@ -57,7 +57,6 @@ function SystemEvents(props) {
   const styles = useStyles();
   var myArray1 = [];
   var myArray2 = [];
-  useEffect(() => {
     
   for (let i = 0; i < Event.length; i++) {
     myArray1.push(
@@ -110,7 +109,6 @@ function SystemEvents(props) {
     );
   }
     
-  });
   
   return (
     <Fragment>

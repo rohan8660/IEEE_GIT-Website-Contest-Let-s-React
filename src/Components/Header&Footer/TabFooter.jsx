@@ -15,6 +15,8 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import PhonelinkRingIcon from "@material-ui/icons/PhonelinkRing";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailIcon from "@material-ui/icons/Mail";
+import {Link as RouteLink } from "react-router-dom";
+
 
 const useStyles = makeStyles((theme) => ({
   footerGrid: {
@@ -132,7 +134,8 @@ function TabFooter(props) {
           </Typography>
           <Typography component="div" className={styles.infoLinksContainer}>
             <Link
-              href="/About"
+              component={RouteLink}
+              to={"/About"}
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -140,7 +143,8 @@ function TabFooter(props) {
               About
             </Link>
             <Link
-              href="/Contacts"
+              component={RouteLink}
+              to={"/Contacts"}
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -148,7 +152,8 @@ function TabFooter(props) {
               Contacts
             </Link>
             <Link
-              href="/Events"
+              component={RouteLink}
+              to={"/Events"}
               underline="none"
               color="secondary"
               className={styles.linkButton}
