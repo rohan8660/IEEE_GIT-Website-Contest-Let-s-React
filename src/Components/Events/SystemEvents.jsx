@@ -54,68 +54,68 @@ const useStyles = (theme) => ({
 });
 
 class SystemEvents extends Component {
-  // state = {
-  //   finalArray: [],
-  // };
-  // componentDidMount = () => {
-  //   const { classes } = this.props;
-  //   var myArray1 = [];
-  //   var myArray2 = [];
+  state = {
+    finalArray: [],
+  };
+  componentDidMount = () => {
+    const { classes } = this.props;
+    var myArray1 = [];
+    var myArray2 = [];
 
-  //   for (let i = 0; i < Event.length; i++) {
-  //     myArray1.push(
-  //       <Grid item key={Event[i].id} lg>
-  //         <Paper
-  //           variant="elevation"
-  //           elevation={3}
-  //           className={classes.paperContainer}
-  //         >
-  //           <Typography component="div" className={classes.imageContainer}>
-  //             <Typography
-  //               component="img"
-  //               src={require(`../../Assets/${Event[i].image}.jpg`)}
-  //               className={classes.imageStyle}
-  //             />
-  //           </Typography>
-  //           <Typography component="div" className={classes.contentContainer}>
-  //             <Typography variant="h5" className={classes.subHeading}>
-  //               {Event[i].name}
-  //             </Typography>
-  //             <Divider />
-  //             <Typography component="div">
-  //               <Typography paragraph className={classes.description}>
-  //                 {Event[i].description}
-  //               </Typography>
-  //             </Typography>
-  //             <Button
-  //               variant="outlined"
-  //               color="default"
-  //               className={classes.buttonStyle}
-  //             >
-  //               Check Out
-  //             </Button>
-  //           </Typography>
-  //         </Paper>
-  //       </Grid>
-  //     );
-  //   }
-  //   for (let j = 0; j < Event.length; j += 3) {
-  //     myArray2.push(
-  //       <Grid component="div" className={classes.mainContainer} key={j}>
-  //         {myArray1[j]}
-  //         {myArray1[j + 1]}
-  //         {myArray1[j + 2]}
-  //       </Grid>
-  //     );
-  //   }
-  //   this.setState({ finalArray: myArray2 });
-  // };
+    for (let i = 0; i < Event.length; i++) {
+      myArray1.push(
+        <Grid item key={Event[i].id} lg>
+          <Paper
+            variant="elevation"
+            elevation={3}
+            className={classes.paperContainer}
+          >
+            <Typography component="div" className={classes.imageContainer}>
+              <Typography
+                component="img"
+                src={require(`../../Assets/${Event[i].image}.jpg`)}
+                className={classes.imageStyle}
+              />
+            </Typography>
+            <Typography component="div" className={classes.contentContainer}>
+              <Typography variant="h5" className={classes.subHeading}>
+                {Event[i].name}
+              </Typography>
+              <Divider />
+              <Typography component="div">
+                <Typography paragraph className={classes.description}>
+                  {Event[i].description}
+                </Typography>
+              </Typography>
+              <Button
+                variant="outlined"
+                color="default"
+                className={classes.buttonStyle}
+              >
+                Check Out
+              </Button>
+            </Typography>
+          </Paper>
+        </Grid>
+      );
+    }
+    // for (let j = 0; j < Event.length; j += 3) {
+    //   myArray2.push(
+    //     <Grid component="div" className={classes.mainContainer} key={j}>
+    //       {myArray1[j]}
+    //       {myArray1[j + 1]}
+    //       {myArray1[j + 2]}
+    //     </Grid>
+    //   );
+    // }
+    this.setState({ finalArray: myArray1 });
+  };
 
   render() {
     const { classes } = this.props;
     return (
       <Fragment>
-        <Typography variant="h1" color="initial"> Hi i am events</Typography>
+        {this.state.finalArray}
       </Fragment>
     );
   }
