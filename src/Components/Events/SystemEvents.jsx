@@ -99,25 +99,25 @@ class SystemEvents extends Component {
         </Grid>
       );
     }
-    // for (let j = 0; j < Event.length; j += 3) {
-    //   myArray2.push(
-    //     <Grid component="div" className={classes.mainContainer} key={j}>
-    //       {myArray1[j]}
-    //       {myArray1[j + 1]}
-    //       {myArray1[j + 2]}
-    //     </Grid>
-    //   );
-    // }
-    this.setState({ finalArray: myArray1 });
+    for (let j = 0; j < Event.length; j += 3) {
+      myArray2.push(
+        <Grid component="div" className={classes.mainContainer} key={j}>
+          {myArray1[j]}
+          {myArray1[j + 1]}
+          {myArray1[j + 2]}
+        </Grid>
+      );
+    }
+    this.setState({ finalArray: myArray2 });
+  };
+
+  componentDidUpdate = () => {
+    console.log(this.state.finalArray);
   };
 
   render() {
     const { classes } = this.props;
-    return (
-      <Fragment>
-        {this.state.finalArray}
-      </Fragment>
-    );
+    return <Fragment>{this.state.finalArray}</Fragment>;
   }
 }
 
