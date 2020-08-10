@@ -60,7 +60,8 @@ class SystemEvents extends Component {
   };
   componentDidMount = () => {
     // this.setState({ isOpened: true });
-    this.setState({finalArray:[1,2,3]})
+    var array=[<div key={1}>Hello</div>,<div key={2}>hi</div>]
+    this.setState({finalArray:array})
   };
 
   // componentDidUpdate(prevState) {
