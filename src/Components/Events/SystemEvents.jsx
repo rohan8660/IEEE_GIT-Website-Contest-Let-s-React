@@ -60,8 +60,48 @@ class SystemEvents extends Component {
   };
   componentDidMount = () => {
     // this.setState({ isOpened: true });
-    var array=[<div key={1}>Hello</div>,<div key={2}>hi</div>]
-    this.setState({finalArray:array})
+    const { classes } = this.props;
+      var myArray1 = [];
+      // var myArray2 = [];
+  
+      for (let i = 0; i < Event.length; i++) {
+        myArray1.push(
+          <Grid item key={Event[i].id} lg>
+            <Paper
+              variant="elevation"
+              elevation={3}
+              className={classes.paperContainer}
+            >
+              <Typography component="div" className={classes.imageContainer}>
+                <Typography
+                  component="img"
+                  src={require(`../../Assets/${Event[i].image}.jpg`)}
+                  className={classes.imageStyle}
+                />
+              </Typography>
+              <Typography component="div" className={classes.contentContainer}>
+                <Typography variant="h5" className={classes.subHeading}>
+                  {Event[i].name}
+                </Typography>
+                <Divider />
+                <Typography component="div">
+                  <Typography paragraph className={classes.description}>
+                    {Event[i].description}
+                  </Typography>
+                </Typography>
+                <Button
+                  variant="outlined"
+                  color="default"
+                  className={classes.buttonStyle}
+                >
+                  Check Out
+                </Button>
+              </Typography>
+            </Paper>
+          </Grid>
+        );
+      }
+    this.setState({finalArray:myArray1})
   };
 
   // componentDidUpdate(prevState) {
