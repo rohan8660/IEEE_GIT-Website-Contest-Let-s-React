@@ -56,8 +56,13 @@ const useStyles = (theme) => ({
 class SystemEvents extends Component {
   state = {
     finalArray: [],
+    isOpened:false
   };
-  componentDidMount = () => {
+  componentDidMount(){
+   this.setState({isOpened:true})
+
+  };
+  componentDidUpdate(){
     const { classes } = this.props;
     var myArray1 = [];
     var myArray2 = [];
@@ -109,11 +114,8 @@ class SystemEvents extends Component {
       );
     }
     this.setState({ finalArray: myArray2 });
-  };
+  }
 
-  componentDidUpdate = () => {
-    console.log(this.state.finalArray);
-  };
 
   render() {
     const { classes } = this.props;
