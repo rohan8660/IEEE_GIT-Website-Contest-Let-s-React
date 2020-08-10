@@ -58,51 +58,51 @@ class SystemEvents extends Component {
     finalArray: [],
     isOpened: false,
   };
-  componentDidMount = () => {
-    // this.setState({ isOpened: true });
-    const { classes } = this.props;
-      var myArray1 = [];
-      // var myArray2 = [];
+  // componentDidMount = () => {
+  //   // this.setState({ isOpened: true });
+  //   const { classes } = this.props;
+  //     var myArray1 = [];
+  //     // var myArray2 = [];
   
-      for (let i = 0; i < Event.length; i++) {
-        myArray1.push(
-          <Grid item key={Event[i].id} lg>
-            <Paper
-              variant="elevation"
-              elevation={3}
-              className={classes.paperContainer}
-            >
-              <Typography component="div" className={classes.imageContainer}>
-                <Typography
-                  component="img"
-                  src={require(`../../Assets/${Event[i].image}.jpg`)}
-                  className={classes.imageStyle}
-                />
-              </Typography>
-              <Typography component="div" className={classes.contentContainer}>
-                <Typography variant="h5" className={classes.subHeading}>
-                  {Event[i].name}
-                </Typography>
-                <Divider />
-                <Typography component="div">
-                  <Typography paragraph className={classes.description}>
-                    {Event[i].description}
-                  </Typography>
-                </Typography>
-                <Button
-                  variant="outlined"
-                  color="default"
-                  className={classes.buttonStyle}
-                >
-                  Check Out
-                </Button>
-              </Typography>
-            </Paper>
-          </Grid>
-        );
-      }
-    this.setState({finalArray:myArray1})
-  };
+  //     for (let i = 0; i < Event.length; i++) {
+  //       myArray1.push(
+  //         <Grid item key={Event[i].id} lg>
+  //           <Paper
+  //             variant="elevation"
+  //             elevation={3}
+  //             className={classes.paperContainer}
+  //           >
+  //             <Typography component="div" className={classes.imageContainer}>
+  //               <Typography
+  //                 component="img"
+  //                 src={require(`../../Assets/${Event[i].image}.jpg`)}
+  //                 className={classes.imageStyle}
+  //               />
+  //             </Typography>
+  //             <Typography component="div" className={classes.contentContainer}>
+  //               <Typography variant="h5" className={classes.subHeading}>
+  //                 {Event[i].name}
+  //               </Typography>
+  //               <Divider />
+  //               <Typography component="div">
+  //                 <Typography paragraph className={classes.description}>
+  //                   {Event[i].description}
+  //                 </Typography>
+  //               </Typography>
+  //               <Button
+  //                 variant="outlined"
+  //                 color="default"
+  //                 className={classes.buttonStyle}
+  //               >
+  //                 Check Out
+  //               </Button>
+  //             </Typography>
+  //           </Paper>
+  //         </Grid>
+  //       );
+  //     }
+  //   this.setState({finalArray:myArray1})
+  // };
 
   // componentDidUpdate(prevState) {
   //   const { classes } = this.props;
@@ -165,7 +165,39 @@ class SystemEvents extends Component {
 
   render() {
     const { classes } = this.props;
-    return <Fragment>{this.state.finalArray}</Fragment>;
+    return <Fragment>{Event.map(({image,id,name,description})=>(<Grid item key={id} lg>
+      <Paper
+        variant="elevation"
+        elevation={3}
+        className={classes.paperContainer}
+      >
+        <Typography component="div" className={classes.imageContainer}>
+          <Typography
+            component="img"
+            src={require(`../../Assets/${image}.jpg`)}
+            className={classes.imageStyle}
+          />
+        </Typography>
+        <Typography component="div" className={classes.contentContainer}>
+          <Typography variant="h5" className={classes.subHeading}>
+            {name}
+          </Typography>
+          <Divider />
+          <Typography component="div">
+            <Typography paragraph className={classes.description}>
+              {description}
+            </Typography>
+          </Typography>
+          <Button
+            variant="outlined"
+            color="default"
+            className={classes.buttonStyle}
+          >
+            Check Out
+          </Button>
+        </Typography>
+      </Paper>
+    </Grid>))}</Fragment>;
   }
 }
 
