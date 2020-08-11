@@ -83,17 +83,14 @@ function MobEvents(props) {
             link2,
             link3,
           }) => (
-            <>
-              <Grid item key={id} style={{ width: "100%" }}>
+            <Typography component="div" key={id}>
+              <Grid item style={{ width: "100%" }}>
                 <Paper
                   variant="elevation"
                   elevation={3}
                   className={styles.paperContainer}
                 >
-                  <Typography
-                    component="div"
-                    className={styles.imageContainer}
-                  >
+                  <Typography component="div" className={styles.imageContainer}>
                     <Typography
                       component="img"
                       src={require(`../../Assets/${image1}.jpg`)}
@@ -124,16 +121,13 @@ function MobEvents(props) {
                   </Typography>
                 </Paper>
               </Grid>
-              <Grid item key={id} style={{ width: "100%" }}>
+              <Grid item style={{ width: "100%" }}>
                 <Paper
                   variant="elevation"
                   elevation={3}
                   className={styles.paperContainer}
                 >
-                  <Typography
-                    component="div"
-                    className={styles.imageContainer}
-                  >
+                  <Typography component="div" className={styles.imageContainer}>
                     <Typography
                       component="img"
                       src={require(`../../Assets/${image2}.jpg`)}
@@ -164,16 +158,13 @@ function MobEvents(props) {
                   </Typography>
                 </Paper>
               </Grid>
-              <Grid item key={id} style={{ width: "100%" }}>
+              <Grid item style={{ width: "100%" }}>
                 <Paper
                   variant="elevation"
                   elevation={3}
                   className={styles.paperContainer}
                 >
-                  <Typography
-                    component="div"
-                    className={styles.imageContainer}
-                  >
+                  <Typography component="div" className={styles.imageContainer}>
                     <Typography
                       component="img"
                       src={require(`../../Assets/${image3}.jpg`)}
@@ -204,7 +195,7 @@ function MobEvents(props) {
                   </Typography>
                 </Paper>
               </Grid>
-            </>
+            </Typography>
           )
         )}
       </Grid>

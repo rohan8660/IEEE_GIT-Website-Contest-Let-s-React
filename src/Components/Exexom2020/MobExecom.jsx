@@ -46,31 +46,6 @@ const useStyles = makeStyles((theme) => ({
 
 function MobExecom(props) {
   const styles = useStyles();
-  var myArray1 = [];
-  var myArray2 = [];
-  for (let i = 0; i < profile.length; i++) {
-    myArray1.push(
-      <Typography
-        component="div"
-        className={styles.cardContainer}
-        key={Math.random()}
-      >
-        <Typography component="div" className={styles.imgContainer}>
-          <Typography
-            className={styles.imageStyle}
-            component="img"
-            src={require(`../../Assets/${profile[i].image}.jpg`)}
-          ></Typography>
-        </Typography>
-        <Typography component="div" className={styles.detailContainer}>
-          <Typography vairant="h3">{profile[i].name}</Typography>
-          <Typography variant="subtitle2">{profile[i].role}</Typography>
-          <Divider color="primary" />
-          <Typography component="p">{profile[i].description}</Typography>
-        </Typography>
-      </Typography>
-    );
-  }
 
   return (
     <Container maxWidth="sm">
@@ -78,7 +53,55 @@ function MobExecom(props) {
         Meet Our Execom Members of IEEE-GIT
       </Typography>
       <Paper variant="elevation" className={styles.paperContainer}>
-        {myArray1}
+      {profile.map(
+          ({
+            name1,
+            name2,
+            role1,
+            role2,
+            image1,
+            image2,
+            description2,
+            description1,
+            id,
+          }) => (
+            <Typography
+              component="div"
+              key={id}
+            >
+              <Typography component="div" className={styles.cardContainer}>
+                <Typography component="div" className={styles.imgContainer}>
+                  <Typography
+                    className={styles.imageStyle}
+                    component="img"
+                    src={require(`../../Assets/${image1}.jpg`)}
+                  ></Typography>
+                </Typography>
+                <Typography component="div">
+                  <Typography vairant="h3">{name1}</Typography>
+                  <Typography variant="subtitle2">{role1}</Typography>
+                  <Divider color="primary" />
+                  <Typography component="p">{description1}</Typography>
+                </Typography>
+              </Typography>
+              <Typography component="div" className={styles.cardContainer}>
+                <Typography component="div" className={styles.imgContainer}>
+                  <Typography
+                    className={styles.imageStyle}
+                    component="img"
+                    src={require(`../../Assets/${image2}.jpg`)}
+                  ></Typography>
+                </Typography>
+                <Typography component="div">
+                  <Typography vairant="h3">{name2}</Typography>
+                  <Typography variant="subtitle2">{role2}</Typography>
+                  <Divider color="primary" />
+                  <Typography component="p">{description2}</Typography>
+                </Typography>
+              </Typography>
+            </Typography>
+          )
+        )}
       </Paper>
     </Container>
   );
