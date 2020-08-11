@@ -4,6 +4,7 @@ const techCards = [
     image: "img1",
     description: "Some Discription",
     id: 1,
+    link:""
   },
   {
     title: "Tech2",

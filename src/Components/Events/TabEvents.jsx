@@ -55,50 +55,6 @@ const useStyles = makeStyles((theme) => ({
 
 function TabEvents(props) {
   const styles = useStyles();
-  var myArray1 = [];
-  var myArray2 = [];
-  for (let i = 0; i < Event.length; i++) {
-    myArray1.push(
-        <Grid item key={Event[i].id}>
-        <Paper variant="elevation" elevation={3} className={styles.paperContainer}>
-          <Typography component="div" className={styles.imageContainer}>
-            <Typography
-              component="img"
-              src={require(`../../Assets/${Event[i].image}.jpg`)}
-              className={styles.imageStyle}
-            />
-          </Typography>
-          <Typography component="div" className={styles.contentContainer}>
-            <Typography variant="h6" className={styles.subHeading}>
-              {Event[i].name}
-            </Typography>
-            <Divider />
-            <Typography component="div">
-              <Typography paragraph className={styles.description}>
-                {Event[i].description}
-              </Typography>
-            </Typography>
-            <Button
-              variant="outlined"
-              color="default"
-              className={styles.buttonStyle}
-            >
-              Check Out
-            </Button>
-          </Typography>
-        </Paper>
-      </Grid>
-    );
-  }
-  for (let j = 0; j < Event.length; j += 3) {
-    myArray2.push(
-        <Grid component="div" className={styles.mainContainer} md  key={Math.random()}>
-         {myArray1[j]}
-         {myArray1[j+1]}
-         {myArray1[j+2]}
-        </Grid>
-    );
-  }
   return (
     <Fragment>
       <Grid container className={styles.root}>
@@ -112,7 +68,146 @@ function TabEvents(props) {
           exercitation laboris do. Irure ex duis ea cillum aliqua. Exercitation
           reprehenderit veniam enim velit aliqua qui cillum ipsum cupidatat.
         </Typography>
-        {myArray2}
+        {Event.map(
+            ({
+              name1,
+              name2,
+              name3,
+              image1,
+              image2,
+              image3,
+              description1,
+              description2,
+              description3,
+              id,
+              link1,
+              link2,
+              link3,
+            }) => (
+              <Grid component="div" className={styles.mainContainer} key={id}>
+                <Grid item lg>
+                  <Paper
+                    variant="elevation"
+                    elevation={3}
+                    className={styles.paperContainer}
+                  >
+                    <Typography
+                      component="div"
+                      className={styles.imageContainer}
+                    >
+                      <Typography
+                        component="img"
+                        src={require(`../../Assets/${image1}.jpg`)}
+                        className={styles.imageStyle}
+                      />
+                    </Typography>
+                    <Typography
+                      component="div"
+                      className={styles.contentContainer}
+                    >
+                      <Typography variant="h5" className={styles.subHeading}>
+                        {name1}
+                      </Typography>
+                      <Divider />
+                      <Typography component="div">
+                        <Typography paragraph className={styles.description}>
+                          {description1}
+                        </Typography>
+                      </Typography>
+                      <Button
+                        variant="outlined"
+                        color="default"
+                        className={styles.buttonStyle}
+                        href={link1}
+                      >
+                        Check Out
+                      </Button>
+                    </Typography>
+                  </Paper>
+                </Grid>
+                <Grid item lg>
+                  <Paper
+                    variant="elevation"
+                    elevation={3}
+                    className={styles.paperContainer}
+                  >
+                    <Typography
+                      component="div"
+                      className={styles.imageContainer}
+                    >
+                      <Typography
+                        component="img"
+                        src={require(`../../Assets/${image2}.jpg`)}
+                        className={styles.imageStyle}
+                      />
+                    </Typography>
+                    <Typography
+                      component="div"
+                      className={styles.contentContainer}
+                    >
+                      <Typography variant="h5" className={styles.subHeading}>
+                        {name2}
+                      </Typography>
+                      <Divider />
+                      <Typography component="div">
+                        <Typography paragraph className={styles.description}>
+                          {description2}
+                        </Typography>
+                      </Typography>
+                      <Button
+                        variant="outlined"
+                        color="default"
+                        className={styles.buttonStyle}
+                        href={link2}
+                      >
+                        Check Out
+                      </Button>
+                    </Typography>
+                  </Paper>
+                </Grid>
+                <Grid item lg>
+                  <Paper
+                    variant="elevation"
+                    elevation={3}
+                    className={styles.paperContainer}
+                  >
+                    <Typography
+                      component="div"
+                      className={styles.imageContainer}
+                    >
+                      <Typography
+                        component="img"
+                        src={require(`../../Assets/${image3}.jpg`)}
+                        className={styles.imageStyle}
+                      />
+                    </Typography>
+                    <Typography
+                      component="div"
+                      className={styles.contentContainer}
+                    >
+                      <Typography variant="h5" className={styles.subHeading}>
+                        {name3}
+                      </Typography>
+                      <Divider />
+                      <Typography component="div">
+                        <Typography paragraph className={styles.description}>
+                          {description3}
+                        </Typography>
+                      </Typography>
+                      <Button
+                        variant="outlined"
+                        color="default"
+                        className={styles.buttonStyle}
+                        href={link3}
+                      >
+                        Check Out
+                      </Button>
+                    </Typography>
+                  </Paper>
+                </Grid>
+              </Grid>
+            )
+          )}
       </Grid>
     </Fragment>
   );

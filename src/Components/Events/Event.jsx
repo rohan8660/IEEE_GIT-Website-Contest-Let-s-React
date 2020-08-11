@@ -1,48 +1,35 @@
-
 const Event = [
-    {
-      name: "Event1",
-      image: "Home1",
-      description:
-        "Some Description",
-      id: 1,
-    },
-    {
-      name: "Event2",
-      image: "Home2",
-      description: 
-      "Some Description",
-      id: 2,
-    },
-    {
-      name: "Event3",
-      image: "img3",
-      description:
-        "Some Description",
-      id: 3,
-    },
-    {
-      name: "Event4",
-      image: "img4",
-      description:
-        "Some Description",
-      id: 4,
-    },
-    {
-        name: "Event5",
-        image: "img3",
-        description:
-          "Some Description",
-        id: 5,
-      },
-      {
-        name: "Event6",
-        image: "img4",
-        description:
-          "Some Description",
-        id: 6,
-      },
-  ];
-  
-  export default Event;
-  
+  {
+    name1: "Event1",
+    image1: "Home1",
+    description1: "Some Description",
+    link1:"",
+    name2: "Event2",
+    image2: "Home2",
+    description2: "Some Description",
+    link2:"",
+    name3: "Event3",
+    image3: "img3",
+    description3: "Some Description",
+    link3:"",
+    id: 1,
+  },
+  {
+    name1: "Event1",
+    image1: "Home1",
+    description1: "Some Description",
+    link1:"",
+    name2: "Event2",
+    image2: "Home2",
+    description2: "Some Description",
+    link2:"",
+    name3: "Event3",
+    image3: "img3",
+    description3: "Some Description",
+    link3:"",
+    id: 2,
+  },
+
+];
+
+export default Event;
