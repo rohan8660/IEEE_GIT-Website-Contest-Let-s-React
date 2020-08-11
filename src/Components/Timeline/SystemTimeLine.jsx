@@ -33,6 +33,7 @@ const useStyle = makeStyles((theme) => ({
   eachTimeItem: {
     width: "100%",
     boxSizing: "inherit",
+    marginTop:"5px"
   },
   headLine: {
     textAlign: "center",
@@ -52,6 +53,7 @@ function SystemTimeLine(props) {
       </Typography>
       <Timeline align="alternate">
         {cardContent.map(({ title, description, image, date, id }) => (
+          
           <TimelineItem key={id} className={styles.eachTimeItem}>
             <TimelineOppositeContent>
               <Typography variant="body2">{date}</Typography>
@@ -91,6 +93,7 @@ function SystemTimeLine(props) {
             </TimelineContent>
           </TimelineItem>
         ))}
+        
         <TimelineItem>
           <TimelineSeparator>
             <TimelineDot>
@@ -100,9 +103,9 @@ function SystemTimeLine(props) {
           <TimelineContent>
             <Paper elevation={3}>
               <Typography variant="h6" component="h1">
-                Repeat
+                Hooo Ya !!
               </Typography>
-              <Typography>Because this is the life you love!</Typography>
+              <Typography>Thats the End</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>
