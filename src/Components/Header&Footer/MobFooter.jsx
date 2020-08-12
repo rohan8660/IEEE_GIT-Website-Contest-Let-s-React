@@ -74,15 +74,25 @@ function TabFooter(props) {
             Visit
           </Typography>
           <Typography component="div" className={styles.socialIconContainer}>
+          <a href="https://www.facebook.com/IEEEGIT/">
             <FacebookIcon color="secondary" className={styles.socialIcon} />
+            </a>
+            <a href="https://www.instagram.com/ieee_git_official/">  
             <InstagramIcon color="secondary" className={styles.socialIcon} />
+            </a>
+            <a href="https://twitter.com/IEEEGIT">
             <TwitterIcon color="secondary" className={styles.socialIcon} />
+            </a>
+            <a href="https://www.linkedin.com/in/ieee-git-b9397041">
             <LinkedInIcon color="secondary" className={styles.socialIcon} />
+            </a>
+            <a href="https://www.youtube.com/channel/UCpxa8x3dblieNZzF6T0xo_Q">
             <YouTubeIcon color="secondary" className={styles.socialIcon} />
+            </a>
           </Typography>
           <Typography component="div" className={styles.linkContainer}>
             <Link
-              href="#"
+              href="https://www.ieee.org/"
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -90,7 +100,7 @@ function TabFooter(props) {
               IEEE.org
             </Link>
             <Link
-              href="#"
+              href="https://www.ieeer10.org/"
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -98,7 +108,7 @@ function TabFooter(props) {
               R10 Sections -IEEE
             </Link>
             <Link
-              href="#"
+              href="https://site.ieee.org/indiacouncil/"
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -169,7 +179,7 @@ function TabFooter(props) {
                 color="secondary"
                 className={styles.linkButton}
               >
-                something@gmail.com
+                gitieee@gmail.com
               </Link>
             </Typography>
             <Typography component="div" className={styles.linkIconContainer}>
@@ -183,7 +193,7 @@ function TabFooter(props) {
                 color="secondary"
                 className={styles.linkButton}
               >
-                098724537
+                +91-9164231958
               </Link>
             </Typography>
             <Typography component="div" className={styles.linkIconContainer}>
@@ -194,7 +204,7 @@ function TabFooter(props) {
                 color="secondary"
                 className={styles.linkButton}
               >
-                9449123456
+                +91-831-2498500, ext-269
               </Link>
             </Typography>
           </Typography>
