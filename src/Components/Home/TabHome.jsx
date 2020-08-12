@@ -84,9 +84,16 @@ const useStyles = makeStyles((theme) => ({
   },
   joinButton: {
     backgroundColor: "coral",
+    "&:hover":{
+      backgroundColor:"#ffa530"
+    }
   },
   sizeProp:{
     maxWidth:345
+  },
+  titleText:{
+    fontSize:18,
+    fontWeight:"600"
   }
 }));
 
@@ -156,7 +163,7 @@ function TabHome(props) {
           We offer wonferful technolgy to our students and profesionals!!
         </Typography>
         <Typography component="div">
-          <CardCarousel imgStyle={2} sizeProp={styles.sizeProp}/>
+          <CardCarousel imgStyle={2} sizeProp={styles.sizeProp} titleText={styles.titleText}/>
         </Typography>
       </Grid>
       <Grid container className={styles.gridRoot2}>
@@ -209,14 +216,14 @@ function TabHome(props) {
             <Button
               variant="contained"
               className={styles.joinButton}
-              href="#contained-buttons"
+              href="https://services10.ieee.org/as/authorization.oauth2?response_type=code&client_id=PF_AS_FOR_PA&redirect_uri=https%3A%2F%2Fwww.ieee.org%2Fpa%2Foidc%2Fcb&state=eyJ6aXAiOiJERUYiLCJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoib20iLCJzdWZmaXgiOiJRTHVUTmkuMTU5NzQ5MzUzMSJ9..tuyPTzlkkixQ8k7a2XjcnQ.jpVgAiAfPuebt92YAF6WRB2jZGg-Vp9sLbbQsuW_V47mtBs_KDyS6HxTBYACAEK1Fz4OzMjcm4ByAro2RkIX2vKJrW5MeZA22eKW-lu03zAvuO9oAJqibI4e0TCZ1O8Ovnt32nRMOogu2FwDTma5TA.blUpGY8PI4KA5nlOTmrEJQ&nonce=oXs5cx9q9MksLKcuvDPdyCftdO_oy9GOACBDPxflovI&acr_values=msp%20sts%20stm%20prf%20crt%20col%20otk%20cmc%20cmp%20spe&scope=openid%20profile%20address%20email%20phone&vnd_pi_requested_resource=https%3A%2F%2Fwww.ieee.org%2Fmembership-application%2Fjoin.html%3Fgrade%3DMember%26promo%3DIEEEJOINP&vnd_pi_application_name=MembershipApplication"
             >
               Jion as a profesional
             </Button>
             <Button
               variant="contained"
               className={styles.joinButton}
-              href="#contained-buttons"
+              href="https://services10.ieee.org/as/authorization.oauth2?response_type=code&client_id=PF_AS_FOR_PA&redirect_uri=https%3A%2F%2Fwww.ieee.org%2Fpa%2Foidc%2Fcb&state=eyJ6aXAiOiJERUYiLCJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoib20iLCJzdWZmaXgiOiJhbExrUWkuMTU5NzQ5MzQzNiJ9..Ot6plNzNKa-AX0zeW6AApA.qXUNrYhu8uC4SNbBCa2qbSE0eiEHhUFg40K8l68IUGcRJY_KDIoUFJ1PBbUFOcfbJDNkSpZmvKNHzfYHd8G3TVBYPBNKtccfCKvqVv5EOBVrFPpfB107RJoBi1CuLKRkqF4uKv8W0dfdJZTZJQuTFQ.4jGcucqxKdT79TYJnnRLmg&nonce=Xn2k1MQUy8_yOic145orrS-jiew-kxHa6oL9nJp8yzM&acr_values=msp%20sts%20stm%20prf%20crt%20col%20otk%20cmc%20cmp%20spe&scope=openid%20profile%20address%20email%20phone&vnd_pi_requested_resource=https%3A%2F%2Fwww.ieee.org%2Fmembership-application%2Fjoin.html%3Fgrade%3DStudent%26promo%3DIEEEJOINS&vnd_pi_application_name=MembershipApplication"
             >
               Jion as a student
             </Button>

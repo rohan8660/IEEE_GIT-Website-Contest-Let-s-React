@@ -21,7 +21,7 @@ import {Link as RouteLink } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   footerGrid: {
     width: "100%",
-    height: 190,
+    height: 200,
     backgroundColor: theme.palette.primary.main,
   },
   footerContainer: {
