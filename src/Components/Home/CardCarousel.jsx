@@ -22,7 +22,7 @@ function CardCarousel({ imgStyle,sizeProp,titleText }) {
   const styles = useStyles();
   return (
     <Carousel itemsToShow={imgStyle} pagination={false} enableAutoPlay={true}>
-      {techCards.map(({title,description,image,id})=>(<Typography component="div" key={id} className={styles.containerStyle}>
+      {techCards.map(({title,description,image,link,id})=>(<Typography component="div" key={id} className={styles.containerStyle}>
         <Card className={sizeProp}>
           <CardActionArea>
             <CardMedia
@@ -42,7 +42,7 @@ function CardCarousel({ imgStyle,sizeProp,titleText }) {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" color="primary">
+            <Button size="small" color="primary" href={link}>
               Learn More
             </Button>
           </CardActions>
