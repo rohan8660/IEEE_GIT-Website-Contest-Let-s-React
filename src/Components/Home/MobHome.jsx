@@ -84,6 +84,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "coral",
     margin: 15,
   },
+  sizeProp:{
+    maxHeight:400,
+    maxWidth:300
+  }
 }));
 
 function MobHome(props) {
@@ -152,7 +156,7 @@ function MobHome(props) {
           We offer wonferful technolgy to our students and profesionals!!
         </Typography>
         <Typography component="div">
-          <CardCarousel imgStyle={1}/>
+          <CardCarousel imgStyle={1} sizeProp={styles.sizeProp}/>
         </Typography>
       </Grid>
       <Grid container className={styles.gridRoot2}>

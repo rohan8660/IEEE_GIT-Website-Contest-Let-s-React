@@ -1,4 +1,3 @@
-import img1 from "../../Assets/img1.jpg";
 
 const cardContent = [
   {

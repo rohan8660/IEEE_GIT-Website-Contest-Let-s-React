@@ -84,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
   joinButton: {
     backgroundColor: "coral",
   },
+  sizeProp: {
+    maxWidth: 345,
+  },
 }));
 
 function SystemHome(props) {
@@ -152,7 +155,7 @@ function SystemHome(props) {
           We offer wonferful technolgy to our students and profesionals!!
         </Typography>
         <Typography component="div">
-          <CardCarousel imgStyle={3}/>
+          <CardCarousel imgStyle={3} sizeProp={styles.sizeProp} />
         </Typography>
       </Grid>
       <Grid container className={styles.gridRoot2}>

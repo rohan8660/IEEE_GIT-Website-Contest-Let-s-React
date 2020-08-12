@@ -33,6 +33,13 @@ function CarouselHome({imgStyle,imgDivStyle}) {
           className={imgStyle}
         />
       </div>
+      <div className={imgDivStyle}>
+        <img
+        alt="pic3"
+          src={require(`../../Assets/Home4.jpg`)}
+          className={imgStyle}
+        />
+      </div>
     </Carousel>
   );
 }

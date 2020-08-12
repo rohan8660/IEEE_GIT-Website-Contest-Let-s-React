@@ -13,32 +13,30 @@ import {
 import techCards from "./cards";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    maxWidth: 345,
-  },
   containerStyle: {
     padding: 20,
   },
 }));
 
-function CardCarousel({ imgStyle }) {
+function CardCarousel({ imgStyle,sizeProp }) {
   const styles = useStyles();
   return (
     <Carousel itemsToShow={imgStyle} pagination={false}>
       {techCards.map(({title,description,image,id})=>(<Typography component="div" key={id} className={styles.containerStyle}>
-        <Card className={styles.root}>
+        <Card className={sizeProp}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="150"
+              height="100%"
+              width="100%"
               image={require(`../../Assets/${image}.jpg`)}
               title={title}
             />
             <CardContent>
-              <Typography gutterBottom variant="h6" component="h2">
+              <Typography gutterBottom variant="h6" style={{height:80}}>
                 {title}
               </Typography>
-              <Typography variant="body2" component="p">
+              <Typography variant="body2" component="p" noWrap={true}>
                 {description}
               </Typography>
             </CardContent>

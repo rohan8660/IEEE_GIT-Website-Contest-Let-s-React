@@ -7,6 +7,8 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import profile from "./Profile";
+import InstagramIcon from "@material-ui/icons/Instagram";
+
 
 const useStyles = makeStyles((theme) => ({
   paperContainer: {
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
-    justifyContent: "space-around",
+    // justifyContent: "space-around",
   },
   imgContainer: {
     width: 100,
@@ -41,6 +43,11 @@ const useStyles = makeStyles((theme) => ({
   },
   detailContainer:{
       width:"50%"
+  },
+  socialIcon: {
+    padding: 5,
+    color: theme.palette.primary.main,
+    
   }
 }));
 
@@ -61,8 +68,8 @@ function MobExecom(props) {
             role2,
             image1,
             image2,
-            description2,
-            description1,
+            instaId1,
+            instaId2,
             id,
           }) => (
             <Typography
@@ -78,10 +85,15 @@ function MobExecom(props) {
                   ></Typography>
                 </Typography>
                 <Typography component="div">
-                  <Typography vairant="h3">{name1}</Typography>
+                  <Typography vairant="h3" style={{fontWeight:"bold",fontStyle:"italic"}}>{name1}</Typography>
                   <Typography variant="subtitle2">{role1}</Typography>
                   <Divider color="primary" />
-                  <Typography component="p">{description1}</Typography>
+                  <a href={instaId1}>
+                      <InstagramIcon
+                        color="secondary"
+                        className={styles.socialIcon}
+                      />
+                  </a>
                 </Typography>
               </Typography>
               <Typography component="div" className={styles.cardContainer}>
@@ -93,10 +105,15 @@ function MobExecom(props) {
                   ></Typography>
                 </Typography>
                 <Typography component="div">
-                  <Typography vairant="h3">{name2}</Typography>
+                  <Typography vairant="h3" style={{fontWeight:"bold",fontStyle:"italic"}}>{name2}</Typography>
                   <Typography variant="subtitle2">{role2}</Typography>
                   <Divider color="primary" />
-                  <Typography component="p">{description2}</Typography>
+                  <a href={instaId2}>
+                      <InstagramIcon
+                        color="secondary"
+                        className={styles.socialIcon}
+                      />
+                  </a>
                 </Typography>
               </Typography>
             </Typography>
