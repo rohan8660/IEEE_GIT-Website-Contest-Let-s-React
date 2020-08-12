@@ -80,25 +80,35 @@ function SystemFooter(props) {
             Visit
           </Typography>
           <Typography component="div" className={styles.socialIconContainer}>
-            <Tooltip title="Facebook">
-              <FacebookIcon color="secondary" className={styles.socialIcon} />
-            </Tooltip>
-            <Tooltip title="Instagram">
-              <InstagramIcon color="secondary" className={styles.socialIcon} />
-            </Tooltip>
-            <Tooltip title="Twitter">
-              <TwitterIcon color="secondary" className={styles.socialIcon} />
-            </Tooltip>
-            <Tooltip title="LinkedIn">
-              <LinkedInIcon color="secondary" className={styles.socialIcon} />
-            </Tooltip>
-            <Tooltip title="YouTube">
-              <YouTubeIcon color="secondary" className={styles.socialIcon} />
-            </Tooltip>
+            <a href="https://www.facebook.com/IEEEGIT/">
+              <Tooltip title="Facebook">
+                <FacebookIcon color="secondary"  className={styles.socialIcon} />
+              </Tooltip>
+            </a>
+            <a href="https://www.instagram.com/ieee_git_official/">
+              <Tooltip title="Instagram">
+                <InstagramIcon color="secondary" className={styles.socialIcon} />
+              </Tooltip>
+            </a>
+            <a href="https://twitter.com/IEEEGIT">
+              <Tooltip title="Twitter">
+                <TwitterIcon color="secondary" className={styles.socialIcon} />
+              </Tooltip>
+            </a>
+            <a href="https://www.linkedin.com/in/ieee-git-b9397041">
+              <Tooltip title="LinkedIn">
+                <LinkedInIcon color="secondary" className={styles.socialIcon} />
+              </Tooltip>
+            </a>
+            <a href="https://www.youtube.com/channel/UCpxa8x3dblieNZzF6T0xo_Q">
+              <Tooltip title="YouTube">
+                <YouTubeIcon color="secondary" className={styles.socialIcon} />
+              </Tooltip>
+            </a>
           </Typography>
           <Typography component="div" className={styles.linkContainer}>
             <Link
-              href="#"
+              href="https://www.ieee.org/"
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -106,7 +116,7 @@ function SystemFooter(props) {
               IEEE.org
             </Link>
             <Link
-              href="#"
+              href="https://www.ieeer10.org/"
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -114,7 +124,7 @@ function SystemFooter(props) {
               R10 Sections -IEEE
             </Link>
             <Link
-              href="#"
+              href="https://site.ieee.org/indiacouncil/"
               underline="none"
               color="secondary"
               className={styles.linkButton}
@@ -185,7 +195,7 @@ function SystemFooter(props) {
                 color="secondary"
                 className={styles.linkButton}
               >
-                something@gmail.com
+                gitieee@gmail.com
               </Link>
             </Typography>
             <Typography component="div" className={styles.linkIconContainer}>
@@ -199,7 +209,7 @@ function SystemFooter(props) {
                 color="secondary"
                 className={styles.linkButton}
               >
-                098724537
+                +91-9164231958
               </Link>
             </Typography>
             <Typography component="div" className={styles.linkIconContainer}>
@@ -210,7 +220,7 @@ function SystemFooter(props) {
                 color="secondary"
                 className={styles.linkButton}
               >
-                9449123456
+                +91-831-2498500, ext-269
               </Link>
             </Typography>
           </Typography>
