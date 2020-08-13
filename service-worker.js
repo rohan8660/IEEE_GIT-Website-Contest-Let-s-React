@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/IEEE_GIT-Website-Contest-Let-s-React/precache-manifest.2c20f10a69e8964d1c191b2a5fe6c492.js"
+  "/IEEE_GIT-Website-Contest-Let-s-React/precache-manifest.90d21c08bdd5c76390d99c6f078e9bd8.js"
 );
 
 self.addEventListener('message', (event) => {
