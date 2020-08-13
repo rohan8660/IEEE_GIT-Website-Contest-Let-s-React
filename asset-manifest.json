@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/IEEE_GIT-Website-Contest-Let-s-React/static/css/main.69eda509.chunk.css",
-    "main.js": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/main.1df6d183.chunk.js",
-    "main.js.map": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/main.1df6d183.chunk.js.map",
+    "main.js": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/main.8b237adf.chunk.js",
+    "main.js.map": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/main.8b237adf.chunk.js.map",
     "runtime-main.js": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/runtime-main.8d254491.js",
     "runtime-main.js.map": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/runtime-main.8d254491.js.map",
     "static/css/2.fb346933.chunk.css": "/IEEE_GIT-Website-Contest-Let-s-React/static/css/2.fb346933.chunk.css",
     "static/js/2.6c81877b.chunk.js": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/2.6c81877b.chunk.js",
     "static/js/2.6c81877b.chunk.js.map": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/2.6c81877b.chunk.js.map",
     "index.html": "/IEEE_GIT-Website-Contest-Let-s-React/index.html",
-    "precache-manifest.90d21c08bdd5c76390d99c6f078e9bd8.js": "/IEEE_GIT-Website-Contest-Let-s-React/precache-manifest.90d21c08bdd5c76390d99c6f078e9bd8.js",
+    "precache-manifest.23e28890c9772fc6a13299b17928324c.js": "/IEEE_GIT-Website-Contest-Let-s-React/precache-manifest.23e28890c9772fc6a13299b17928324c.js",
     "service-worker.js": "/IEEE_GIT-Website-Contest-Let-s-React/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/IEEE_GIT-Website-Contest-Let-s-React/static/css/2.fb346933.chunk.css.map",
     "static/css/main.69eda509.chunk.css.map": "/IEEE_GIT-Website-Contest-Let-s-React/static/css/main.69eda509.chunk.css.map",
@@ -70,6 +70,6 @@
     "static/css/2.fb346933.chunk.css",
     "static/js/2.6c81877b.chunk.js",
     "static/css/main.69eda509.chunk.css",
-    "static/js/main.1df6d183.chunk.js"
+    "static/js/main.8b237adf.chunk.js"
   ]
 }
