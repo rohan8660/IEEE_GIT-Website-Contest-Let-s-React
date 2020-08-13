@@ -39,7 +39,7 @@ function CardCarousel({ imgStyle, sizeProp, titleText }) {
                   <Typography
                     gutterBottom
                     className={titleText}
-                    style={{ height: 80 }}
+                    style={{ height: 90 }}
                   >
                     {title}
                   </Typography>
