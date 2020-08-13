@@ -96,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.secondary.main,
       backgroundColor: theme.palette.primary.dark,
     },
+    width:200
   },
   sizeProp: {
     maxWidth: 345,
