@@ -87,7 +87,7 @@ function SystemHeader(props) {
       <AppBar position="static" color="primary">
         <Toolbar className={styles.toolBar}>
           <Typography variant="h6" component="h1" className={styles.logo}>
-            Logo
+            IEEE-GIT
           </Typography>
           <Typography component="div" className={styles.navContainer}>
             <Button

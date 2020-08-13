@@ -95,7 +95,7 @@ function TabHeader(props) {
   return (
     <AppBar position="static" color="primary">
       <Toolbar className={styles.toolBar}>
-        <Typography className={styles.logo}>Logo</Typography>
+        <Typography className={styles.logo}>IEEE-GIT</Typography>
         <Typography className={styles.search} component="div">
           <Typography className={styles.searchIcon} component="div">
             <SearchIcon />
