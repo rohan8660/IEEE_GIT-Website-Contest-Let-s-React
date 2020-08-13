@@ -28,11 +28,14 @@ import red from "@material-ui/core/colors/red";
 const useStyle = makeStyles((theme) => ({
   root: {
     maxWidth: "100%",
-    height: 300,
+    height: 350,
+    borderRadius:20
+
   },
   eachTimeItem: {
     width: "100%",
     boxSizing: "inherit",
+    marginTop:20
   },
   headLine: {
     textAlign: "center",
@@ -54,7 +57,7 @@ function TabTimeLine(props) {
         {cardContent.map(({ title, description, image, date, id }) => (
           <TimelineItem key={id} className={styles.eachTimeItem}>
             <TimelineOppositeContent>
-              <Typography variant="body2">{date}</Typography>
+              <Typography style={{fontSize:20,fontWeight:"bold",paddingTop:20}}>{date}</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot className={styles.dotTime}>
@@ -63,7 +66,7 @@ function TabTimeLine(props) {
               <TimelineConnector className={styles.dotTime} />
             </TimelineSeparator>
             <TimelineContent>
-              <Paper elevation={3}>
+              <Paper elevation={3} style={{borderRadius:20}}>
                 <Card className={styles.root}>
                   <CardActionArea>
                     <CardMedia
@@ -72,26 +75,21 @@ function TabTimeLine(props) {
                       image={require(`../../Assets/${image}.jpg`)}
                       title={title}
                     />
-                    <CardContent>
-                      <Typography gutterBottom variant="h6" component="h2">
-                        {title}
-                      </Typography>
-                      <Typography variant="body2" component="p">
-                        {description}
-                      </Typography>
-                    </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small" >
-                      Learn More
-                    </Button>
-                  </CardActions>
+                  <CardContent>
+                    <Typography gutterBottom variant="h6" component="h2">
+                      {title}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {description}
+                    </Typography>
+                  </CardContent>
                 </Card>
               </Paper>
             </TimelineContent>
           </TimelineItem>
         ))}
-        <TimelineItem>
+        <TimelineItem className={styles.eachTimeItem}>
           <TimelineSeparator>
             <TimelineDot>
               <AcUnitIcon className={styles.dotTime} />
@@ -100,9 +98,9 @@ function TabTimeLine(props) {
           <TimelineContent>
             <Paper elevation={3}>
               <Typography variant="h6" component="h1">
-                Repeat
+                Hoo Ya!!
               </Typography>
-              <Typography>Because this is the life you love!</Typography>
+              <Typography>That's the end</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>

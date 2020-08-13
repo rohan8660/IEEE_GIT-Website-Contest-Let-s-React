@@ -190,10 +190,10 @@ function SystemFooter(props) {
             <Typography component="div" className={styles.linkIconContainer}>
               <MailIcon color="secondary" className={styles.linkIcon} />
               <Link
-                href="#"
+                href="mailto:gitieee@gmail.com"
                 underline="none"
                 color="secondary"
-                className={styles.linkButton}
+                style={{padding:5}}
               >
                 gitieee@gmail.com
               </Link>
@@ -207,7 +207,7 @@ function SystemFooter(props) {
                 href="#"
                 underline="none"
                 color="secondary"
-                className={styles.linkButton}
+                style={{padding:5}}
               >
                 +91-9164231958
               </Link>
@@ -218,7 +218,7 @@ function SystemFooter(props) {
                 href="#"
                 underline="none"
                 color="secondary"
-                className={styles.linkButton}
+                style={{padding:5}}
               >
                 +91-831-2498500, ext-269
               </Link>

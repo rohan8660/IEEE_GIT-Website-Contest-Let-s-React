@@ -28,12 +28,15 @@ import red from "@material-ui/core/colors/red";
 const useStyle = makeStyles((theme) => ({
   root: {
     maxWidth: "100%",
-    height: 300,
+    height: 350,
+    borderRadius:20
+
   },
   eachTimeItem: {
     width: "100%",
     boxSizing: "inherit",
-    marginTop:"5px"
+    marginTop: 10,
+
   },
   headLine: {
     textAlign: "center",
@@ -53,10 +56,9 @@ function SystemTimeLine(props) {
       </Typography>
       <Timeline align="alternate">
         {cardContent.map(({ title, description, image, date, id }) => (
-          
           <TimelineItem key={id} className={styles.eachTimeItem}>
             <TimelineOppositeContent>
-              <Typography variant="body2">{date}</Typography>
+              <Typography style={{fontSize:20,fontWeight:"bold",paddingTop:20}}>{date}</Typography>
             </TimelineOppositeContent>
             <TimelineSeparator>
               <TimelineDot className={styles.dotTime}>
@@ -65,36 +67,31 @@ function SystemTimeLine(props) {
               <TimelineConnector className={styles.dotTime} />
             </TimelineSeparator>
             <TimelineContent>
-              <Paper elevation={3}>
+              <Paper elevation={3} style={{borderRadius:30 }}>
                 <Card className={styles.root}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      height="140"
+                      height="190"
                       image={require(`../../Assets/${image}.jpg`)}
                       title={title}
                     />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="h2">
-                        {title}
-                      </Typography>
-                      <Typography variant="body2" component="p">
-                        {description}
-                      </Typography>
-                    </CardContent>
                   </CardActionArea>
-                  <CardActions>
-                    <Button size="small">
-                      Learn More
-                    </Button>
-                  </CardActions>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {title}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {description}
+                    </Typography>
+                  </CardContent>
                 </Card>
               </Paper>
             </TimelineContent>
           </TimelineItem>
         ))}
-        
-        <TimelineItem>
+
+        <TimelineItem className={styles.eachTimeItem}>
           <TimelineSeparator>
             <TimelineDot>
               <AcUnitIcon className={styles.dotTime} />

@@ -18,22 +18,18 @@ import {
   TimelineSeparator,
   TimelineConnector,
   TimelineContent,
-  TimelineOppositeContent,
 } from "@material-ui/lab";
 import LocalActivityIcon from "@material-ui/icons/LocalActivity";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
 import cardContent from "./cardContent";
 import red from "@material-ui/core/colors/red";
 
+
 const useStyle = makeStyles((theme) => ({
-  root: {
-    maxWidth: "100%",
-    height: 200,
-    width: 200,
-  },
+
   eachTimeItem: {
-    width: 0,
-    boxSizing: "inherit",
+    marginTop: 20,
+    padding:0
   },
   headLine: {
     textAlign: "center",
@@ -42,7 +38,15 @@ const useStyle = makeStyles((theme) => ({
   dotTime: {
     color: red[500],
   },
+  missingOppositeContent:{
+    '&::before': {
+    padding:0,
+    flex:0
+    }
+  }
 }));
+
+
 
 function MobTimeLine(props) {
   const styles = useStyle();
@@ -53,47 +57,51 @@ function MobTimeLine(props) {
       </Typography>
       <Timeline align="left">
         {cardContent.map(({ title, description, image, date, id }) => (
-          <TimelineItem key={id} className={styles.eachTimeItem}>
-            <TimelineOppositeContent>
-              <Typography variant="body2">{date}</Typography>
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineDot className={styles.dotTime}>
-                <LocalActivityIcon />
+          <TimelineItem key={id} classes={{
+            root:styles.eachTimeItem,
+            missingOppositeContent:styles.missingOppositeContent
+          }} >
+            <TimelineSeparator >
+              <TimelineDot>
+                <LocalActivityIcon className={styles.dotTime}/>
               </TimelineDot>
-              <TimelineConnector className={styles.dotTime} />
+              <TimelineConnector className={styles.dotTime}/>
             </TimelineSeparator>
-            <TimelineContent style={{height:300}}>
+            <TimelineContent>
+              <Typography
+                variant="body2"
+                style={{ fontSize: 16, fontWeight: "bold" }}
+              >
+                {date}
+              </Typography>
               <Paper elevation={3}>
                 <Card className={styles.root}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      height="140"
+                      height="80"
                       image={require(`../../Assets/${image}.jpg`)}
                       title={title}
                     />
-                    <CardContent style={{padding:0,margin:0}} >
-                      <Typography
-                        variant="subtitle1"
-                        component="h6"
-                        style={{fontWeight:"900"}} 
-                      >
-                        {title}
-                      </Typography>
-                    </CardContent>
                   </CardActionArea>
-                  <CardActions style={{padding:0,margin:0}}>
-                    <Button size="small" >
-                      Learn More
-                    </Button>
-                  </CardActions>
+                  <CardContent>
+                    <Typography
+                      variant="subtitle1"
+                      component="h6"
+                      style={{ fontWeight: "900" }}
+                    >
+                      {title}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {description}
+                    </Typography>
+                  </CardContent>
                 </Card>
               </Paper>
             </TimelineContent>
           </TimelineItem>
         ))}
-        <TimelineItem>
+        <TimelineItem className={styles.eachTimeItem}>
           <TimelineSeparator>
             <TimelineDot>
               <AcUnitIcon className={styles.dotTime} />
@@ -102,9 +110,9 @@ function MobTimeLine(props) {
           <TimelineContent>
             <Paper elevation={3}>
               <Typography variant="h6" component="h1">
-                Repeat
+                Hoo Ya!!
               </Typography>
-              <Typography>Because this is the life you love!</Typography>
+              <Typography>That's the end</Typography>
             </Paper>
           </TimelineContent>
         </TimelineItem>

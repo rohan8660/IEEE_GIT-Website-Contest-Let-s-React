@@ -3,53 +3,34 @@ import {
   Grid,
   Typography,
   Paper,
-  Divider,
   Button,
+  Card,
+  CardActionArea,
+  CardMedia,
+  CardActions,
+  CardContent,
   withStyles,
 } from "@material-ui/core";
 import Event from "./Event";
 import PropTypes from "prop-types";
 
-const useStyles = (theme) => ({
+const useclasses = (theme) => ({
   headings: {
     width: "100%",
     padding: 10,
     textAlign: "center",
   },
-  imageContainer: {
-    width: 400,
-    height: 300,
-  },
-  imageStyle: {
-    width: "100%",
-    height: "100%",
-    backgroundSize: "cover",
-    borderRadius: 10,
-  },
-  paperContainer: {
-    width: 400,
-    height: 500,
-    "&:hover": {
-      background: theme.palette.secondary.light,
-    },
-    margin: 20,
-    borderRadius: 10,
-  },
-  subHeading: {
-    padding: 5,
-    fontWeight: "bold",
-  },
-  description: {
-    padding: 5,
-  },
   mainContainer: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-around",
+    width: "100%",
+    marginTop: 40,
+    padding: 10,
   },
-  buttonStyle: {
-    borderRadius: 15,
-    margin: 5,
+  sizeProp: {
+    maxWidth: 345,
+    borderRadius:20
   },
 });
 
@@ -58,17 +39,17 @@ class SystemEvents extends Component {
     const { classes } = this.props;
     return (
       <Fragment>
-        <Grid container className={classes.root}>
+        <Grid container>
           <Typography variant="h4" className={classes.headings}>
             Our Upcoming Events
           </Typography>
           <Typography paragraph style={{ textAlign: "center" }}>
-            Sit dolor exercitation elit esse magna sint dolor mollit quis
-            labore. Officia sunt do voluptate aliqua voluptate dolor voluptate
-            aute amet incididunt mollit non. Officia sit ipsum fugiat elit ea
-            aliquip exercitation laboris do. Irure ex duis ea cillum aliqua.
-            Exercitation reprehenderit veniam enim velit aliqua qui cillum ipsum
-            cupidatat.
+            ...............................................................
+            ...............................................................
+            Theses are the dummy up coming events.. Later can be
+            added.
+            ...............................................................
+            ...............................................................
           </Typography>
           {Event.map(
             ({
@@ -86,128 +67,105 @@ class SystemEvents extends Component {
               link2,
               link3,
             }) => (
-              <Grid component="div" className={classes.mainContainer} key={id}>
-                <Grid item lg>
-                  <Paper
-                    variant="elevation"
-                    elevation={3}
-                    className={classes.paperContainer}
-                  >
-                    <Typography
-                      component="div"
-                      className={classes.imageContainer}
-                    >
-                      <Typography
+              <Typography
+                component="div"
+                className={classes.mainContainer}
+                key={id}
+              >
+                <Paper elevation={3} style={{borderRadius:20}}>
+                  <Card className={classes.sizeProp}>
+                    <CardActionArea>
+                      <CardMedia
                         component="img"
-                        src={require(`../../Assets/${image1}.jpg`)}
-                        className={classes.imageStyle}
+                        height="100%"
+                        width="100%"
+                        image={require(`../../Assets/${image1}.jpg`)}
+                        title={name1}
                       />
-                    </Typography>
-                    <Typography
-                      component="div"
-                      className={classes.contentContainer}
-                    >
-                      <Typography variant="h5" className={classes.subHeading}>
-                        {name1}
-                      </Typography>
-                      <Divider />
-                      <Typography component="div">
-                        <Typography paragraph className={classes.description}>
+                      <CardContent>
+                        <Typography gutterBottom style={{ height: 50,fontWeight:"bold" }}>
+                          {name1}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          component="p"
+                          noWrap={true}
+                          style={{ height: 30 }}
+                        >
                           {description1}
                         </Typography>
-                      </Typography>
-                      <Button
-                        variant="outlined"
-                        color="default"
-                        className={classes.buttonStyle}
-                        href={link1}
-                      >
-                        Check Out
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button size="small" color="primary" href={link1}>
+                        Check out
                       </Button>
-                    </Typography>
-                  </Paper>
-                </Grid>
-                <Grid item lg>
-                  <Paper
-                    variant="elevation"
-                    elevation={3}
-                    className={classes.paperContainer}
-                  >
-                    <Typography
-                      component="div"
-                      className={classes.imageContainer}
-                    >
-                      <Typography
+                    </CardActions>
+                  </Card>
+                </Paper>
+                <Paper elevation={3} style={{borderRadius:20}}>
+                  <Card className={classes.sizeProp}>
+                    <CardActionArea>
+                      <CardMedia
                         component="img"
-                        src={require(`../../Assets/${image2}.jpg`)}
-                        className={classes.imageStyle}
+                        height="100%"
+                        width="100%"
+                        image={require(`../../Assets/${image2}.jpg`)}
+                        title={name2}
                       />
-                    </Typography>
-                    <Typography
-                      component="div"
-                      className={classes.contentContainer}
-                    >
-                      <Typography variant="h5" className={classes.subHeading}>
-                        {name2}
-                      </Typography>
-                      <Divider />
-                      <Typography component="div">
-                        <Typography paragraph className={classes.description}>
+                      <CardContent>
+                        <Typography gutterBottom style={{ height: 50,fontWeight:"bold" }}>
+                          {name2}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          component="p"
+                          noWrap={true}
+                          style={{ height: 30 }}
+                        >
                           {description2}
                         </Typography>
-                      </Typography>
-                      <Button
-                        variant="outlined"
-                        color="default"
-                        className={classes.buttonStyle}
-                        href={link2}
-                      >
-                        Check Out
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button size="small" color="primary" href={link2}>
+                        Check out
                       </Button>
-                    </Typography>
-                  </Paper>
-                </Grid>
-                <Grid item lg>
-                  <Paper
-                    variant="elevation"
-                    elevation={3}
-                    className={classes.paperContainer}
-                  >
-                    <Typography
-                      component="div"
-                      className={classes.imageContainer}
-                    >
-                      <Typography
+                    </CardActions>
+                  </Card>
+                </Paper>
+                <Paper elevation={3} style={{borderRadius:20}}>
+                  <Card className={classes.sizeProp}>
+                    <CardActionArea>
+                      <CardMedia
                         component="img"
-                        src={require(`../../Assets/${image3}.jpg`)}
-                        className={classes.imageStyle}
+                        height="100%"
+                        width="100%"
+                        image={require(`../../Assets/${image3}.jpg`)}
+                        title={name3}
                       />
-                    </Typography>
-                    <Typography
-                      component="div"
-                      className={classes.contentContainer}
-                    >
-                      <Typography variant="h5" className={classes.subHeading}>
-                        {name3}
-                      </Typography>
-                      <Divider />
-                      <Typography component="div">
-                        <Typography paragraph className={classes.description}>
+                      <CardContent>
+                        <Typography gutterBottom style={{ height: 50,fontWeight:"bold" }}>
+                          {name3}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          component="p"
+                          noWrap={true}
+                          style={{ height: 30 }}
+                        >
                           {description3}
                         </Typography>
-                      </Typography>
-                      <Button
-                        variant="outlined"
-                        color="default"
-                        className={classes.buttonStyle}
-                        href={link3}
-                      >
-                        Check Out
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button size="small" color="primary" href={link3}>
+                        Check out
                       </Button>
-                    </Typography>
-                  </Paper>
-                </Grid>
-              </Grid>
+                    </CardActions>
+                  </Card>
+                </Paper>
+              </Typography>
             )
           )}
         </Grid>
@@ -220,4 +178,4 @@ SystemEvents.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(useStyles)(SystemEvents);
+export default withStyles(useclasses)(SystemEvents);

@@ -8,18 +8,15 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import PhonelinkRingIcon from "@material-ui/icons/PhonelinkRing";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailIcon from "@material-ui/icons/Mail";
-import {Link as RouteLink } from "react-router-dom";
+import { Link as RouteLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   footerGrid: {
     width: "100%",
-    // height: 190,
     backgroundColor: theme.palette.primary.main,
   },
   footerContainer: {
     width: "100%",
-    // display: "flex",
-    // justifyContent: "space-around",
   },
   socialIconContainer: {
     display: "flex",
@@ -28,9 +25,6 @@ const useStyles = makeStyles((theme) => ({
   socialIcon: {
     padding: 5,
     color: theme.palette.secondary.main,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
   },
   linkContainer: {
     display: "flex",
@@ -46,9 +40,6 @@ const useStyles = makeStyles((theme) => ({
   },
   linkButton: {
     padding: 5,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
     fontSize: 14,
   },
   linkIcon: {
@@ -63,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 function TabFooter(props) {
   const styles = useStyles();
   return (
-    <Grid container className={styles.footerGrid} >
+    <Grid container className={styles.footerGrid}>
       <Typography component="div" className={styles.footerContainer}>
         <Typography component="div">
           <Typography
@@ -74,20 +65,20 @@ function TabFooter(props) {
             Visit
           </Typography>
           <Typography component="div" className={styles.socialIconContainer}>
-          <a href="https://www.facebook.com/IEEEGIT/">
-            <FacebookIcon color="secondary" className={styles.socialIcon} />
+            <a href="https://www.facebook.com/IEEEGIT/">
+              <FacebookIcon color="secondary" className={styles.socialIcon} />
             </a>
-            <a href="https://www.instagram.com/ieee_git_official/">  
-            <InstagramIcon color="secondary" className={styles.socialIcon} />
+            <a href="https://www.instagram.com/ieee_git_official/">
+              <InstagramIcon color="secondary" className={styles.socialIcon} />
             </a>
             <a href="https://twitter.com/IEEEGIT">
-            <TwitterIcon color="secondary" className={styles.socialIcon} />
+              <TwitterIcon color="secondary" className={styles.socialIcon} />
             </a>
             <a href="https://www.linkedin.com/in/ieee-git-b9397041">
-            <LinkedInIcon color="secondary" className={styles.socialIcon} />
+              <LinkedInIcon color="secondary" className={styles.socialIcon} />
             </a>
             <a href="https://www.youtube.com/channel/UCpxa8x3dblieNZzF6T0xo_Q">
-            <YouTubeIcon color="secondary" className={styles.socialIcon} />
+              <YouTubeIcon color="secondary" className={styles.socialIcon} />
             </a>
           </Typography>
           <Typography component="div" className={styles.linkContainer}>
@@ -174,7 +165,7 @@ function TabFooter(props) {
             <Typography component="div" className={styles.linkIconContainer}>
               <MailIcon color="secondary" className={styles.linkIcon} />
               <Link
-                href="#"
+                href="mailto:gitieee@gmail.com"
                 underline="none"
                 color="secondary"
                 className={styles.linkButton}

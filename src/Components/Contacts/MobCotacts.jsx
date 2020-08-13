@@ -44,26 +44,26 @@ function MobContacts(props) {
               display: "flex",
               flexDirection: "column",
               width: "100%",
-              padding: 20,
+              padding: 5,
             }}
             autoComplete="off"
           >
-            <Typography component="h6" variant="h4">
+            <Typography variant="h6">
               Contact Us
             </Typography>
             <FormControl required margin="normal">
-              <TextField label="Full Name" autoFocus />
+              <TextField label="Full Name" />
             </FormControl>
             <FormControl required margin="normal">
-              <TextField label="Email" autoFocus type="email" />
+              <TextField label="Email" type="email" />
             </FormControl>
             <FormControl required margin="normal">
-              <TextField label="Contact Number" autoFocus />
+              <TextField label="Contact Number" />
             </FormControl>
             <FormControl required margin="normal">
-              <TextField label="Message" autoFocus />
+              <TextField label="Message" />
             </FormControl>
-            <Button type="submit" variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="primary" onClick={()=>window.alert("We will reach as soon as posible. Thank You!!")}>
               Submit
             </Button>
           </Typography>

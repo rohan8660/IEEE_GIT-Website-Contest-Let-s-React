@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     width: "90%",
     backgroundColor: "rgba(255,255,255,0.3)",
     position: "absolute",
-    top: 500,
+    top: 570,
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
@@ -96,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.secondary.main,
       backgroundColor: theme.palette.primary.dark,
     },
+    width:200
   },
   sizeProp: {
     maxWidth: 345,
@@ -133,7 +134,7 @@ function SystemHome(props) {
         <Paper elevation={3} className={styles.paperRoot}>
           <Typography component="div" className={styles.counterMainContainer}>
             <Typography component="div" className={styles.lottieContainer}>
-              <Lottie options={defaultOptions} height={180} width={180} />
+              <Lottie options={defaultOptions} height={140} width={140} style={{alignSelf:"center"}}/>
               <Typography component="div" className={styles.counterContainer}>
                 <CountUp
                   start={0}
@@ -147,7 +148,7 @@ function SystemHome(props) {
               </Typography>
             </Typography>
             <Typography component="div" className={styles.lottieContainer}>
-              <Lottie options={defaultOptions1} height={180} width={180} />
+              <Lottie options={defaultOptions1} height={140} width={140} style={{alignSelf:"center"}} />
               <Typography component="div" className={styles.counterContainer}>
                 <CountUp
                   start={0}

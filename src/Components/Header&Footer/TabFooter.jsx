@@ -15,8 +15,7 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import PhonelinkRingIcon from "@material-ui/icons/PhonelinkRing";
 import PhoneIcon from "@material-ui/icons/Phone";
 import MailIcon from "@material-ui/icons/Mail";
-import {Link as RouteLink } from "react-router-dom";
-
+import { Link as RouteLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   footerGrid: {
@@ -36,9 +35,6 @@ const useStyles = makeStyles((theme) => ({
   socialIcon: {
     padding: 5,
     color: theme.palette.secondary.main,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
   },
   linkContainer: {
     display: "flex",
@@ -53,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
   },
   linkButton: {
     padding: 5,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
     fontSize: 14,
   },
   linkIcon: {
@@ -83,12 +76,15 @@ function TabFooter(props) {
           <Typography component="div" className={styles.socialIconContainer}>
             <a href="https://www.facebook.com/IEEEGIT/">
               <Tooltip title="Facebook">
-                <FacebookIcon color="secondary"  className={styles.socialIcon} />
+                <FacebookIcon color="secondary" className={styles.socialIcon} />
               </Tooltip>
             </a>
             <a href="https://www.instagram.com/ieee_git_official/">
               <Tooltip title="Instagram">
-                <InstagramIcon color="secondary" className={styles.socialIcon} />
+                <InstagramIcon
+                  color="secondary"
+                  className={styles.socialIcon}
+                />
               </Tooltip>
             </a>
             <a href="https://twitter.com/IEEEGIT">
@@ -108,7 +104,7 @@ function TabFooter(props) {
             </a>
           </Typography>
           <Typography component="div" className={styles.linkContainer}>
-          <Link
+            <Link
               href="https://www.ieee.org/"
               underline="none"
               color="secondary"
@@ -191,7 +187,7 @@ function TabFooter(props) {
             <Typography component="div" className={styles.linkIconContainer}>
               <MailIcon color="secondary" className={styles.linkIcon} />
               <Link
-                href="#"
+                href="mailto:gitieee@gmail.com"
                 underline="none"
                 color="secondary"
                 className={styles.linkButton}
