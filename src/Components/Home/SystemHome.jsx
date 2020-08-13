@@ -1,11 +1,20 @@
-import React, { Fragment } from "react";
-import { Grid, Paper, Typography, makeStyles, Button } from "@material-ui/core";
+import React, { Fragment, useState } from "react";
+import {
+  Grid,
+  Paper,
+  Typography,
+  makeStyles,
+  Button,
+  Collapse,
+} from "@material-ui/core";
 import CarouselHome from "./CarouselHome";
 import CountUp from "react-countup";
 import CardCarousel from "./CardCarousel";
 import Lottie from "react-lottie";
 import animationData from "../../Assets/Lottie/28705-student-university-character.json";
 import animationData1 from "../../Assets/Lottie/20135-profesor.json";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   imgDiv: {
@@ -16,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     backgroundRepeat: "no-repeat",
-    opacity: "0.6",
+    // opacity: "0.6",
   },
   gridRoot: {
     display: "flex",
@@ -25,14 +34,13 @@ const useStyles = makeStyles((theme) => ({
   },
   paperRoot: {
     width: "90%",
-    height: 250,
-    // padding: 20,
     backgroundColor: "rgba(255,255,255,0.3)",
     position: "absolute",
     top: 500,
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
+    borderRadius: 10,
   },
   gridRoot2: {
     display: "flex",
@@ -82,18 +90,21 @@ const useStyles = makeStyles((theme) => ({
     padding: 10,
   },
   joinButton: {
-    backgroundColor: "coral",
-    "&:hover":{
-      backgroundColor:"#ffa530"
-    }
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.secondary.main,
+    "&:hover": {
+      color: theme.palette.secondary.main,
+      backgroundColor: theme.palette.primary.dark,
+    },
   },
   sizeProp: {
     maxWidth: 345,
+    borderRadius: 10,
   },
-  titleText:{
-    fontSize:20,
-    fontWeight:"600"
-  }
+  titleText: {
+    fontSize: 20,
+    fontWeight: "600",
+  },
 }));
 
 function SystemHome(props) {
@@ -114,14 +125,12 @@ function SystemHome(props) {
     },
   };
   const styles = useStyles();
+  const [Expand, setExpand] = useState(false);
   return (
     <Fragment>
       <CarouselHome imgStyle={styles.imageProp} imgDivStyle={styles.imgDiv} />
       <Grid container className={styles.gridRoot}>
         <Paper elevation={3} className={styles.paperRoot}>
-          <Typography variant="h4" className={styles.typo1}>
-            Welcome to all the enthusiastic students and faculty..
-          </Typography>
           <Typography component="div" className={styles.counterMainContainer}>
             <Typography component="div" className={styles.lottieContainer}>
               <Lottie options={defaultOptions} height={180} width={180} />
@@ -155,14 +164,18 @@ function SystemHome(props) {
         </Paper>
       </Grid>
       <Grid>
-        <Typography component="div" style={{ height: 175 }} />
+        <Typography component="div" style={{ height: 90 }} />
       </Grid>
       <Grid container className={styles.gridRoot2}>
         <Typography variant="h3" style={{ padding: 20 }}>
           We offer wonferful technolgy to our students and profesionals!!
         </Typography>
         <Typography component="div">
-          <CardCarousel imgStyle={3} sizeProp={styles.sizeProp} titleText={styles.titleText}/>
+          <CardCarousel
+            imgStyle={3}
+            sizeProp={styles.sizeProp}
+            titleText={styles.titleText}
+          />
         </Typography>
       </Grid>
       <Grid container className={styles.gridRoot2}>
@@ -178,30 +191,48 @@ function SystemHome(props) {
             <Typography component="h4" variant="h6">
               When you join IEEE, you:
             </Typography>
-            <Typography component="ul">
-              <Typography component="li">
-                Join a community of over 420,000 technology and engineering
-                professionals united by a common desire to continuously learn,
-                interact, collaborate, and innovate
+
+            {Expand ? null : (
+              <Typography component="div" onClick={() => setExpand(true)} style={{display:"flex",flexDirection:"row",cursor:"pointer"}}>
+                <Typography style={{color:"blue"}}>Read More</Typography>
+                <ExpandMore />
               </Typography>
-              <Typography component="li">
-                Get the resources and opportunities you need to keep on top of
-                changes in technology
+            )}
+
+            <Collapse in={Expand} timeout="auto" unmountOnExit>
+              <Typography component="ul">
+                <Typography component="li">
+                  Join a community of over 420,000 technology and engineering
+                  professionals united by a common desire to continuously learn,
+                  interact, collaborate, and innovate
+                </Typography>
+                <Typography component="li">
+                  Get the resources and opportunities you need to keep on top of
+                  changes in technology
+                </Typography>
+                <Typography component="li">
+                  Get involved in standards development
+                </Typography>
+                <Typography component="li">
+                  Network with other professionals in your local area or within
+                  a specific technical interest
+                </Typography>
+                <Typography component="li">
+                  Mentor the next generation of engineers and technologists
+                </Typography>
               </Typography>
-              <Typography component="li">
-                Get involved in standards development
+              <Typography component="h4" variant="h6">
+                and so much more.
               </Typography>
-              <Typography component="li">
-                Network with other professionals in your local area or within a
-                specific technical interest
+              <Typography
+                component="div"
+                onClick={() => setExpand(false)}
+                style={{display:"flex",flexDirection:"row",cursor:"pointer"}}>
+                <Typography style={{color:"blue"}}>Read Less</Typography>
+                <ExpandLess />
               </Typography>
-              <Typography component="li">
-                Mentor the next generation of engineers and technologists
-              </Typography>
-            </Typography>
-            <Typography component="h4" variant="h6">
-              and so much more.
-            </Typography>
+            </Collapse>
+
             <br />
             <Typography component="h4" variant="h6">
               Enhance your IEEE membership by joining a Society specializing in

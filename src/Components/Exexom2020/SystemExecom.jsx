@@ -5,11 +5,10 @@ import {
   Typography,
   Divider,
   makeStyles,
-  Tooltip
+  Tooltip,
 } from "@material-ui/core";
 import profile from "./Profile";
 import InstagramIcon from "@material-ui/icons/Instagram";
-
 
 const useStyles = makeStyles((theme) => ({
   paperContainer: {
@@ -41,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 100,
   },
   socialIcon: {
+    width: 30,
+    height: 30,
     padding: 5,
-    color: theme.palette.primary.main,
-    
-  }
+  },
 }));
 
 function SystemExecom(props) {
@@ -86,15 +85,18 @@ function SystemExecom(props) {
                   ></Typography>
                 </Typography>
                 <Typography component="div">
-                  <Typography vairant="h3" style={{fontWeight:"bold",fontStyle:"italic"}}>{name1}</Typography>
+                  <Typography vairant="h3" style={{ fontWeight: "bold" }}>
+                    {name1}
+                  </Typography>
                   <Typography variant="subtitle2">{role1}</Typography>
                   <Divider color="primary" />
                   <a href={instaId1}>
                     <Tooltip title="Instagram">
-                      <InstagramIcon
-                        color="secondary"
+                      <Typography
                         className={styles.socialIcon}
-                      />
+                        component="img"
+                        src={require(`../../Assets/insta.jpg`)}
+                      ></Typography>
                     </Tooltip>
                   </a>
                 </Typography>
@@ -108,15 +110,18 @@ function SystemExecom(props) {
                   ></Typography>
                 </Typography>
                 <Typography component="div">
-                  <Typography vairant="h3" style={{fontWeight:"bold",fontStyle:"italic"}}>{name2}</Typography>
+                  <Typography vairant="h3" style={{ fontWeight: "bold" }}>
+                    {name2}
+                  </Typography>
                   <Typography variant="subtitle2">{role2}</Typography>
                   <Divider color="primary" />
                   <a href={instaId2}>
                     <Tooltip title="Instagram">
-                      <InstagramIcon
-                        color="secondary"
+                      <Typography
                         className={styles.socialIcon}
-                      />
+                        component="img"
+                        src={require(`../../Assets/insta.jpg`)}
+                      ></Typography>
                     </Tooltip>
                   </a>
                 </Typography>

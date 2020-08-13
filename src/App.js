@@ -13,7 +13,7 @@ import Events from "./Components/Events/Events";
 function App() {
   return (
       <Fragment>
-        <Router basename="/finalVersion">
+        <Router basename="/IEEE_GIT-Website-Contest-Let-s-React">
           <Header/>
           <Route path='/' exact component={Home}/>
           <Route path='/Timeline' component={TimeLine}/>

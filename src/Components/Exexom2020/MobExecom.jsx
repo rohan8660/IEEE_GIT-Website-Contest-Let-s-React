@@ -9,7 +9,6 @@ import {
 import profile from "./Profile";
 import InstagramIcon from "@material-ui/icons/Instagram";
 
-
 const useStyles = makeStyles((theme) => ({
   paperContainer: {
     width: "100%",
@@ -17,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     marginBottom: 20,
     flexDirection: "column",
-
   },
   cardRepeater: {
     display: "flex",
@@ -41,14 +39,14 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     borderRadius: 100,
   },
-  detailContainer:{
-      width:"50%"
+  detailContainer: {
+    width: "50%",
   },
   socialIcon: {
+    width: 20,
+    height: 20,
     padding: 5,
-    color: theme.palette.primary.main,
-    
-  }
+  },
 }));
 
 function MobExecom(props) {
@@ -60,7 +58,7 @@ function MobExecom(props) {
         Meet Our Execom Members of IEEE-GIT
       </Typography>
       <Paper variant="elevation" className={styles.paperContainer}>
-      {profile.map(
+        {profile.map(
           ({
             name1,
             name2,
@@ -72,10 +70,7 @@ function MobExecom(props) {
             instaId2,
             id,
           }) => (
-            <Typography
-              component="div"
-              key={id}
-            >
+            <Typography component="div" key={id}>
               <Typography component="div" className={styles.cardContainer}>
                 <Typography component="div" className={styles.imgContainer}>
                   <Typography
@@ -85,14 +80,17 @@ function MobExecom(props) {
                   ></Typography>
                 </Typography>
                 <Typography component="div">
-                  <Typography vairant="h3" style={{fontWeight:"bold",fontStyle:"italic"}}>{name1}</Typography>
+                  <Typography vairant="h3" style={{ fontWeight: "bold" }}>
+                    {name1}
+                  </Typography>
                   <Typography variant="subtitle2">{role1}</Typography>
                   <Divider color="primary" />
                   <a href={instaId1}>
-                      <InstagramIcon
-                        color="secondary"
-                        className={styles.socialIcon}
-                      />
+                    <Typography
+                      className={styles.socialIcon}
+                      component="img"
+                      src={require(`../../Assets/insta.jpg`)}
+                    ></Typography>
                   </a>
                 </Typography>
               </Typography>
@@ -105,14 +103,17 @@ function MobExecom(props) {
                   ></Typography>
                 </Typography>
                 <Typography component="div">
-                  <Typography vairant="h3" style={{fontWeight:"bold",fontStyle:"italic"}}>{name2}</Typography>
+                  <Typography vairant="h3" style={{ fontWeight: "bold" }}>
+                    {name2}
+                  </Typography>
                   <Typography variant="subtitle2">{role2}</Typography>
                   <Divider color="primary" />
                   <a href={instaId2}>
-                      <InstagramIcon
-                        color="secondary"
-                        className={styles.socialIcon}
-                      />
+                    <Typography
+                      className={styles.socialIcon}
+                      component="img"
+                      src={require(`../../Assets/insta.jpg`)}
+                    ></Typography>
                   </a>
                 </Typography>
               </Typography>
