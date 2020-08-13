@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d33b3b8df4b5510e9c2e15533225a1ad",
+    "revision": "4a9800532fd63bc7e85282a5ebb2a53e",
     "url": "/IEEE_GIT-Website-Contest-Let-s-React/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/IEEE_GIT-Website-Contest-Let-s-React/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "e1507e29480a635478c1",
+    "revision": "918634a2b2929f8b6f5a",
     "url": "/IEEE_GIT-Website-Contest-Let-s-React/static/css/main.69eda509.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/2.6c81877b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e1507e29480a635478c1",
-    "url": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/main.b9530dcf.chunk.js"
+    "revision": "918634a2b2929f8b6f5a",
+    "url": "/IEEE_GIT-Website-Contest-Let-s-React/static/js/main.bbcb1712.chunk.js"
   },
   {
     "revision": "22ed67c5f56c957ac9d5",
