@@ -36,9 +36,7 @@ const useStyles = makeStyles((theme) => ({
   socialIcon: {
     padding: 5,
     color: theme.palette.secondary.main,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
+
   },
   linkContainer: {
     display: "flex",
@@ -53,9 +51,6 @@ const useStyles = makeStyles((theme) => ({
   },
   linkButton: {
     padding: 5,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
     fontSize: 14,
   },
   linkIcon: {

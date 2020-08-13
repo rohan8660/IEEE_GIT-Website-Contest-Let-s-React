@@ -72,7 +72,7 @@ function SystemTimeLine(props) {
                   <CardActionArea>
                     <CardMedia
                       component="img"
-                      height="180"
+                      height="190"
                       image={require(`../../Assets/${image}.jpg`)}
                       title={title}
                     />

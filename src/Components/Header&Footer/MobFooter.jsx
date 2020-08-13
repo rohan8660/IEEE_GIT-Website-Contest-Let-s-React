@@ -13,13 +13,11 @@ import {Link as RouteLink } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   footerGrid: {
     width: "100%",
-    // height: 190,
     backgroundColor: theme.palette.primary.main,
   },
   footerContainer: {
     width: "100%",
-    // display: "flex",
-    // justifyContent: "space-around",
+  
   },
   socialIconContainer: {
     display: "flex",
@@ -28,9 +26,7 @@ const useStyles = makeStyles((theme) => ({
   socialIcon: {
     padding: 5,
     color: theme.palette.secondary.main,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
+   
   },
   linkContainer: {
     display: "flex",
@@ -46,9 +42,6 @@ const useStyles = makeStyles((theme) => ({
   },
   linkButton: {
     padding: 5,
-    "&:hover": {
-      color: theme.palette.primary.light,
-    },
     fontSize: 14,
   },
   linkIcon: {

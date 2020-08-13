@@ -18,17 +18,15 @@ import {
   TimelineSeparator,
   TimelineConnector,
   TimelineContent,
-  TimelineOppositeContent,
 } from "@material-ui/lab";
 import LocalActivityIcon from "@material-ui/icons/LocalActivity";
 import AcUnitIcon from "@material-ui/icons/AcUnit";
 import cardContent from "./cardContent";
 import red from "@material-ui/core/colors/red";
-import "./mobTimeline.css";
 
 
 const useStyle = makeStyles((theme) => ({
- 
+
   eachTimeItem: {
     marginTop: 20,
     padding:0
@@ -41,20 +39,14 @@ const useStyle = makeStyles((theme) => ({
     color: red[500],
   },
   missingOppositeContent:{
-    padding:0
+    '&::before': {
+    padding:0,
+    flex:0
+    }
   }
 }));
 
-const timeComp=makeStyles((theme)=>({
-  root: {
-    maxWidth: "100%",
-    height: 325,
-    width: 210,
-  },
-  missingOppositeContent:{
-    padding:0
-  }
-},{name:"MuiTimelineItem"}));
+
 
 function MobTimeLine(props) {
   const styles = useStyle();
@@ -65,7 +57,10 @@ function MobTimeLine(props) {
       </Typography>
       <Timeline align="left">
         {cardContent.map(({ title, description, image, date, id }) => (
-          <TimelineItem key={id} className={styles.eachTimeItem} >
+          <TimelineItem key={id} classes={{
+            root:styles.eachTimeItem,
+            missingOppositeContent:styles.missingOppositeContent
+          }} >
             <TimelineSeparator >
               <TimelineDot>
                 <LocalActivityIcon className={styles.dotTime}/>
