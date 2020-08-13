@@ -1,5 +1,12 @@
-import React,{Fragment,useState} from "react";
-import { makeStyles,Typography,Button,Grid,Paper,Collapse } from "@material-ui/core";
+import React, { Fragment, useState } from "react";
+import {
+  makeStyles,
+  Typography,
+  Button,
+  Grid,
+  Paper,
+  Collapse,
+} from "@material-ui/core";
 import CarouselHome from "./CarouselHome";
 import CountUp from "react-countup";
 import CardCarousel from "./CardCarousel";
@@ -37,7 +44,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     flexDirection: "column",
     borderRadius: 10,
-
   },
   gridRoot2: {
     display: "flex",
@@ -94,15 +100,14 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.primary.dark,
     },
   },
-  sizeProp:{
-    maxWidth:345,
+  sizeProp: {
+    maxWidth: 345,
     borderRadius: 10,
-
   },
-  titleText:{
-    fontSize:18,
-    fontWeight:"600"
-  }
+  titleText: {
+    fontSize: 18,
+    fontWeight: "600",
+  },
 }));
 
 function TabHome(props) {
@@ -126,7 +131,10 @@ function TabHome(props) {
   const [Expand, setExpand] = useState(false);
   return (
     <Fragment>
-      <CarouselHome imgStyle={styles.imageProp} imgDivStyle={styles.tabImgProp} />
+      <CarouselHome
+        imgStyle={styles.imageProp}
+        imgDivStyle={styles.tabImgProp}
+      />
       <Grid container className={styles.gridRoot}>
         <Paper elevation={3} className={styles.paperRoot}>
           <Typography component="div" className={styles.counterMainContainer}>
@@ -166,10 +174,14 @@ function TabHome(props) {
       </Grid>
       <Grid container className={styles.gridRoot2}>
         <Typography variant="h4" style={{ padding: 20 }}>
-          We offer wonferful technolgy to our students and profesionals!!
+          We offer wonderful technology to our students and professors!!
         </Typography>
         <Typography component="div">
-          <CardCarousel imgStyle={2} sizeProp={styles.sizeProp} titleText={styles.titleText}/>
+          <CardCarousel
+            imgStyle={2}
+            sizeProp={styles.sizeProp}
+            titleText={styles.titleText}
+          />
         </Typography>
       </Grid>
       <Grid container className={styles.gridRoot2}>
@@ -186,42 +198,55 @@ function TabHome(props) {
               When you join IEEE, you:
             </Typography>
             {Expand ? null : (
-              <Typography component="div" onClick={() => setExpand(true)} style={{display:"flex",flexDirection:"row",cursor:"pointer"}}>
-                <Typography style={{color:"blue"}}>Read More</Typography>
+              <Typography
+                component="div"
+                onClick={() => setExpand(true)}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  cursor: "pointer",
+                }}
+              >
+                <Typography style={{ color: "blue" }}>Read More</Typography>
                 <ExpandMore />
               </Typography>
             )}
 
             <Collapse in={Expand} timeout="auto" unmountOnExit>
-            <Typography component="ul">
-              <Typography component="li">
-                Join a community of over 420,000 technology and engineering
-                professionals united by a common desire to continuously learn,
-                interact, collaborate, and innovate
+              <Typography component="ul">
+                <Typography component="li">
+                  Join a community of over 420,000 technology and engineering
+                  professionals united by a common desire to continuously learn,
+                  interact, collaborate, and innovate
+                </Typography>
+                <Typography component="li">
+                  Get the resources and opportunities you need to keep on top of
+                  changes in technology
+                </Typography>
+                <Typography component="li">
+                  Get involved in standards development
+                </Typography>
+                <Typography component="li">
+                  Network with other professionals in your local area or within
+                  a specific technical interest
+                </Typography>
+                <Typography component="li">
+                  Mentor the next generation of engineers and technologists
+                </Typography>
               </Typography>
-              <Typography component="li">
-                Get the resources and opportunities you need to keep on top of
-                changes in technology
+              <Typography component="h6" variant="h6">
+                and so much more.
               </Typography>
-              <Typography component="li">
-                Get involved in standards development
-              </Typography>
-              <Typography component="li">
-                Network with other professionals in your local area or within a
-                specific technical interest
-              </Typography>
-              <Typography component="li">
-                Mentor the next generation of engineers and technologists
-              </Typography>
-            </Typography>
-            <Typography component="h6" variant="h6">
-              and so much more.
-            </Typography>
-            <Typography
+              <Typography
                 component="div"
                 onClick={() => setExpand(false)}
-                style={{display:"flex",flexDirection:"row",cursor:"pointer"}}>
-                <Typography style={{color:"blue"}}>Read Less</Typography>
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  cursor: "pointer",
+                }}
+              >
+                <Typography style={{ color: "blue" }}>Read Less</Typography>
                 <ExpandLess />
               </Typography>
             </Collapse>

@@ -169,7 +169,7 @@ function SystemHome(props) {
       </Grid>
       <Grid container className={styles.gridRoot2}>
         <Typography variant="h3" style={{ padding: 20 }}>
-          We offer wonferful technolgy to our students and profesionals!!
+          We offer wonderful technology to our students and professors!!
         </Typography>
         <Typography component="div">
           <CardCarousel
