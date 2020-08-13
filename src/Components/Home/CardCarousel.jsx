@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 function CardCarousel({ imgStyle,sizeProp,titleText }) {
   const styles = useStyles();
   return (
-    <Carousel itemsToShow={imgStyle} pagination={false} enableAutoPlay={true}>
+    <Carousel itemsToShow={imgStyle} pagination={false}>
       {techCards.map(({title,description,image,link,id})=>(<Typography component="div" key={id} className={styles.containerStyle}>
         <Card className={sizeProp}>
           <CardActionArea>

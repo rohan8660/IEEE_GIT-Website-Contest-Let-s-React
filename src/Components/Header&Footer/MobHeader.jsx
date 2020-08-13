@@ -91,7 +91,7 @@ function MobHeader(props) {
   };
 
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="sticky" color="primary">
       <Toolbar className={styles.toolBar}>
         <Typography
           component="div"

@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
 function TabFooter(props) {
   const styles = useStyles();
   return (
-    <Grid container className={styles.footerGrid}>
+    <Grid container className={styles.footerGrid} >
       <Typography component="div" className={styles.footerContainer}>
         <Typography component="div">
           <Typography
