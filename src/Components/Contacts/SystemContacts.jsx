@@ -54,18 +54,18 @@ function SystemContacts(props) {
               Contact Us
             </Typography>
             <FormControl required margin="normal">
-              <TextField label="Full Name" autoFocus />
+              <TextField label="Full Name"  />
             </FormControl>
             <FormControl required margin="normal">
-              <TextField label="Email" autoFocus type="email"/>
+              <TextField label="Email"  type="email"/>
             </FormControl>
             <FormControl required margin="normal">
-              <TextField label="Contact Number" autoFocus />
+              <TextField label="Contact Number"  />
             </FormControl>
             <FormControl required margin="normal">
-              <TextField label="Message" autoFocus />
+              <TextField label="Message"  />
             </FormControl>
-            <Button type="submit" variant="contained" color="primary">
+            <Button type="submit" variant="contained" color="primary" onClick={()=>window.alert("We will reach as soon as posible. Thank You!!")}>
               Submit
             </Button>
           </Typography>

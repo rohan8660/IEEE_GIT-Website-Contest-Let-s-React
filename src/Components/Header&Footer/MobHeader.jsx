@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginLeft: 0,
-    width: "50%",
+    width: "35%",
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(1),
       width: "auto",
@@ -146,7 +146,7 @@ function MobHeader(props) {
             </Typography>
           </Drawer>
           <Typography style={{ fontSize: 16, padding: 10, fontWeight: "600" }}>
-            Logo
+            IEEE-GIT
           </Typography>
         </Typography>
         <Tooltip title="Search">
