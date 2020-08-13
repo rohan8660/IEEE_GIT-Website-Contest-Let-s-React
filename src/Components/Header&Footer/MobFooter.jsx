@@ -179,7 +179,7 @@ function TabFooter(props) {
                 className={styles.linkIcon}
               />
               <Link
-                href="#"
+                href="tel:+91-9164231958"
                 underline="none"
                 color="secondary"
                 className={styles.linkButton}
@@ -190,7 +190,7 @@ function TabFooter(props) {
             <Typography component="div" className={styles.linkIconContainer}>
               <PhoneIcon color="secondary" className={styles.linkIcon} />
               <Link
-                href="#"
+                href="tel:+91-831-2498500, ext-269"
                 underline="none"
                 color="secondary"
                 className={styles.linkButton}

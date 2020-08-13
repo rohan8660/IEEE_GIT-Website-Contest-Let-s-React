@@ -39,7 +39,8 @@ function CardCarousel({ imgStyle, sizeProp, titleText }) {
                   <Typography
                     gutterBottom
                     className={titleText}
-                    style={{ height: 90 }}
+                    style={{overflow: "hidden", textOverflow: "ellipsis" }}
+                    noWrap={true}
                   >
                     {title}
                   </Typography>

@@ -20,7 +20,7 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: [
-      // 'Ubuntu',
+      // "PT Serif",
       "-apple-system",
       "BlinkMacSystemFont",
       '"Segoe UI"',
